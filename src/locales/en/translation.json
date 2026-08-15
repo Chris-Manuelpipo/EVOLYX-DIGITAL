@@ -1,0 +1,92 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "about": "About",
+    "contact": "Contact",
+    "cta": "Request a quote"
+  },
+  "hero": {
+    "title_1": "We turn your ideas into",
+    "title_highlight": "digital products",
+    "subtitle": "EVOLYX Digital designs custom websites, mobile apps and software for Cameroonian and international businesses.",
+    "cta_primary": "See our work",
+    "cta_secondary": "Request a quote"
+  },
+  "services": {
+    "eyebrow": "What we do",
+    "title": "Solutions built for your business",
+    "subtitle": "From showcase websites to complex business software, we cover the full lifecycle of your digital project.",
+    "cta": "View all services"
+  },
+  "portfolio": {
+    "eyebrow": "Our work",
+    "title": "Projects, not promises",
+    "subtitle": "Every solution we build answers a real business problem.",
+    "cta": "View full portfolio",
+    "view_project": "View project",
+    "back_to_portfolio": "Back to portfolio",
+    "similar_project_cta": "Have a similar project in mind?",
+    "context": "Context",
+    "solution": "Solution delivered",
+    "highlight": "What makes this project stand out",
+    "stack": "Tech stack"
+  },
+  "why": {
+    "eyebrow": "Why EVOLYX Digital",
+    "title": "A team that builds, not just promises",
+    "point_1_title": "Real technical expertise",
+    "point_1_text": "Live production projects, from real-time systems to data, not mockups.",
+    "point_2_title": "Tailored approach",
+    "point_2_text": "Every solution starts from a real business problem, never a generic template.",
+    "point_3_title": "End-to-end support",
+    "point_3_text": "From needs analysis to maintenance, one point of contact from start to finish."
+  },
+  "process": {
+    "eyebrow": "How it works",
+    "title": "From first conversation to ongoing support",
+    "step_1": "Initial contact",
+    "step_2": "Quote & scoping",
+    "step_3": "Development",
+    "step_4": "Delivery",
+    "step_5": "Maintenance"
+  },
+  "cta_final": {
+    "title": "Have a project in mind?",
+    "subtitle": "Let's talk, no strings attached.",
+    "button": "Get in touch"
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Let's talk about your project",
+    "subtitle": "Tell us what you need, we'll get back to you within 24 business hours.",
+    "form": {
+      "name": "Full name",
+      "company": "Company (optional)",
+      "email": "Email",
+      "phone": "Phone (optional)",
+      "project_type": "Project type",
+      "project_type_placeholder": "Select a project type",
+      "budget": "Estimated budget",
+      "budget_placeholder": "Select a range",
+      "message": "Describe your needs",
+      "submit": "Send request",
+      "sending": "Sending...",
+      "success": "Thank you! Your message was sent, we'll get back to you shortly.",
+      "error": "Something went wrong. Please try again or contact us directly by email."
+    },
+    "direct": "Or reach us directly"
+  },
+  "footer": {
+    "tagline": "We turn your ideas into digital products.",
+    "quick_links": "Quick links",
+    "group": "EVOLYX Group",
+    "legal": "Legal notice",
+    "rights": "All rights reserved."
+  },
+  "about_page": {
+    "title": "About EVOLYX Digital",
+    "intro": "EVOLYX Digital is the software development branch of the EVOLYX group, dedicated to designing custom websites, mobile apps and business software."
+  }
+}

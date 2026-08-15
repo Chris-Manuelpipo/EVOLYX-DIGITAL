@@ -1,0 +1,92 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "about": "À propos",
+    "contact": "Contact",
+    "cta": "Demander un devis"
+  },
+  "hero": {
+    "title_1": "Nous transformons vos idées en",
+    "title_highlight": "produits numériques",
+    "subtitle": "EVOLYX Digital conçoit des sites, applications et logiciels sur mesure pour les entreprises camerounaises et internationales.",
+    "cta_primary": "Voir nos projets",
+    "cta_secondary": "Demander un devis"
+  },
+  "services": {
+    "eyebrow": "Ce que nous faisons",
+    "title": "Des solutions pensées pour votre métier",
+    "subtitle": "Du site vitrine au logiciel métier complexe, nous couvrons l'ensemble du cycle de vie de votre projet digital.",
+    "cta": "Voir tous les services"
+  },
+  "portfolio": {
+    "eyebrow": "Notre travail",
+    "title": "Des projets, pas des promesses",
+    "subtitle": "Chaque solution que nous construisons répond à un vrai problème métier.",
+    "cta": "Voir tout le portfolio",
+    "view_project": "Voir le projet",
+    "back_to_portfolio": "Retour au portfolio",
+    "similar_project_cta": "Un projet similaire en tête ?",
+    "context": "Contexte",
+    "solution": "Solution apportée",
+    "highlight": "Ce qui distingue ce projet",
+    "stack": "Stack technique"
+  },
+  "why": {
+    "eyebrow": "Pourquoi EVOLYX Digital",
+    "title": "Une équipe qui construit, pas qui promet",
+    "point_1_title": "Expertise technique réelle",
+    "point_1_text": "Des projets en production, du temps réel à la data, pas des maquettes.",
+    "point_2_title": "Approche sur mesure",
+    "point_2_text": "Chaque solution part d'un vrai problème métier, jamais d'un template générique.",
+    "point_3_title": "Accompagnement de bout en bout",
+    "point_3_text": "De l'analyse du besoin à la maintenance, un seul interlocuteur du début à la fin."
+  },
+  "process": {
+    "eyebrow": "Comment ça marche",
+    "title": "De la première discussion à la maintenance",
+    "step_1": "Prise de contact",
+    "step_2": "Devis & cadrage",
+    "step_3": "Développement",
+    "step_4": "Livraison",
+    "step_5": "Maintenance"
+  },
+  "cta_final": {
+    "title": "Un projet en tête ?",
+    "subtitle": "Discutons-en, sans engagement.",
+    "button": "Contactez-nous"
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Parlons de votre projet",
+    "subtitle": "Décrivez-nous votre besoin, nous revenons vers vous sous 24h ouvrées.",
+    "form": {
+      "name": "Nom complet",
+      "company": "Entreprise (optionnel)",
+      "email": "Email",
+      "phone": "Téléphone (optionnel)",
+      "project_type": "Type de projet",
+      "project_type_placeholder": "Sélectionnez un type de projet",
+      "budget": "Budget indicatif",
+      "budget_placeholder": "Sélectionnez une fourchette",
+      "message": "Décrivez votre besoin",
+      "submit": "Envoyer la demande",
+      "sending": "Envoi en cours...",
+      "success": "Merci ! Votre message a bien été envoyé, nous revenons vers vous rapidement.",
+      "error": "Une erreur est survenue. Merci de réessayer ou de nous contacter directement par email."
+    },
+    "direct": "Ou contactez-nous directement"
+  },
+  "footer": {
+    "tagline": "Nous transformons vos idées en produits numériques.",
+    "quick_links": "Liens rapides",
+    "group": "Groupe EVOLYX",
+    "legal": "Mentions légales",
+    "rights": "Tous droits réservés."
+  },
+  "about_page": {
+    "title": "À propos d'EVOLYX Digital",
+    "intro": "EVOLYX Digital est la branche développement logiciel du groupe EVOLYX, dédiée à la conception de sites web, applications mobiles et logiciels métiers sur mesure."
+  }
+}
