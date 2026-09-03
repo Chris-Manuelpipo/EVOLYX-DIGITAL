@@ -12,20 +12,22 @@ export default function ProcessSection() {
           <p className="text-sm font-semibold tracking-[0.2em] text-evolyx-gold uppercase mb-3">
             {t('process.eyebrow')}
           </p>
-          <h2 className="font-display text-3xl md:text-4xl font-bold">
-            {t('process.title')}
-          </h2>
+          <h2 className="font-display text-3xl md:text-4xl font-bold">{t('process.title')}</h2>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8">
           {steps.map((step, index) => (
-            <div key={step} className="relative text-center">
+            <div key={step} className="relative">
               <div className="font-display text-4xl font-bold text-evolyx-gold/30 mb-3">
                 {String(index + 1).padStart(2, '0')}
               </div>
-              <p className="text-sm font-medium text-white/90">{t(`process.${step}`)}</p>
+              <p className="text-sm font-medium text-white mb-2">{t(`process.${step}`)}</p>
+              <p className="text-xs text-white/70 leading-relaxed">{t(`process.${step}_text`)}</p>
               {index < steps.length - 1 && (
-                <div className="hidden md:block absolute top-5 left-[60%] w-full h-px bg-white/10" />
+                <div
+                  className="hidden md:block absolute top-5 left-[60%] w-full h-px bg-white/10"
+                  aria-hidden="true"
+                />
               )}
             </div>
           ))}

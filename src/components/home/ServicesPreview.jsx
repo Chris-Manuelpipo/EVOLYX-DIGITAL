@@ -18,6 +18,7 @@ export default function ServicesPreview() {
           <h2 className="font-display text-3xl md:text-4xl font-bold text-evolyx-black leading-tight">
             {t('services.title')}
           </h2>
+          <p className="mt-4 text-evolyx-gray leading-relaxed">{t('services.subtitle')}</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-[1px] bg-evolyx-black/[0.06] mb-12">
@@ -28,7 +29,7 @@ export default function ServicesPreview() {
 
         <Link
           to="/services"
-          className="inline-flex items-center gap-2 text-evolyx-black font-medium hover:text-evolyx-gold transition-colors"
+          className="inline-flex items-center gap-2 text-evolyx-black font-medium hover:text-evolyx-gold transition-colors min-h-11"
         >
           {t('services.cta')} <FaArrowRight className="text-sm" />
         </Link>

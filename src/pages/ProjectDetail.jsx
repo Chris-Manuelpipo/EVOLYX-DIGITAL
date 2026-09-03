@@ -1,13 +1,15 @@
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { FaArrowLeft, FaExternalLinkAlt } from 'react-icons/fa';
-import { projects } from '../data/projects';
+import { FaArrowLeft } from 'react-icons/fa';
+import { projects, getCategoryLabel } from '../data/projects';
+import ProjectCover from '../components/portfolio/ProjectCover';
+import LiveSitePreview from '../components/portfolio/LiveSitePreview';
 
 export default function ProjectDetail() {
   const { slug } = useParams();
   const { t, i18n } = useTranslation();
-  const lang = i18n.language === 'en' ? 'en' : 'fr';
-  const project = projects.find((p) => p.slug === slug);
+  const lang = i18n.language.startsWith('en') ? 'en' : 'fr';
+  const project = projects.find((item) => item.slug === slug);
 
   if (!project) return <Navigate to="/portfolio" replace />;
 
@@ -16,17 +18,22 @@ export default function ProjectDetail() {
       <div className="max-w-3xl mx-auto">
         <Link
           to="/portfolio"
-          className="inline-flex items-center gap-2 text-sm text-evolyx-gray hover:text-evolyx-gold transition-colors mb-8"
+          className="inline-flex items-center gap-2 text-sm text-evolyx-gray hover:text-evolyx-gold transition-colors mb-8 min-h-11"
         >
-          <FaArrowLeft className="text-xs" /> {t('portfolio.back_to_portfolio')}
+          <FaArrowLeft className="text-xs" aria-hidden="true" /> {t('portfolio.back_to_portfolio')}
         </Link>
 
-        <div className="aspect-[16/9] rounded-2xl bg-gradient-to-br from-evolyx-black to-evolyx-gray flex items-center justify-center mb-10">
-          <span className="font-display text-4xl font-bold text-evolyx-gold/90">
-            {project.title}
-          </span>
-        </div>
+        {project.url ? (
+          <LiveSitePreview url={project.url} title={project.title} />
+        ) : (
+          <div className="mb-10 rounded-sm overflow-hidden">
+            <ProjectCover title={project.title} image={project.image} className="aspect-[16/9]" />
+          </div>
+        )}
 
+        <p className="text-evolyx-gold text-[11px] font-bold tracking-[0.15em] uppercase mb-3">
+          {getCategoryLabel(project.category, lang)}
+        </p>
         <h1 className="font-display text-3xl md:text-4xl font-bold text-evolyx-black mb-2">
           {project.title}
         </h1>
@@ -36,23 +43,12 @@ export default function ProjectDetail() {
           {project.stack.map((tech) => (
             <span
               key={tech}
-              className="text-xs font-medium bg-evolyx-bg text-evolyx-black/70 px-3 py-1.5 rounded-full"
+              className="text-xs font-medium bg-evolyx-bg text-evolyx-black/80 px-3 py-1.5 rounded-full"
             >
               {tech}
             </span>
           ))}
         </div>
-
-        {project.url && (
-          <a
-            href={project.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm font-medium text-evolyx-gold hover:underline mb-10"
-          >
-            {project.url} <FaExternalLinkAlt className="text-xs" />
-          </a>
-        )}
 
         <div className="space-y-8">
           <div>
@@ -67,7 +63,7 @@ export default function ProjectDetail() {
             </h2>
             <p className="text-evolyx-gray leading-relaxed">{project.solution[lang]}</p>
           </div>
-          <div className="bg-evolyx-bg rounded-2xl p-6 border border-evolyx-gold/20">
+          <div className="bg-evolyx-bg rounded-sm p-6 border border-evolyx-gold/20">
             <h2 className="font-display text-lg font-bold text-evolyx-black mb-2">
               {t('portfolio.highlight')}
             </h2>
@@ -79,7 +75,7 @@ export default function ProjectDetail() {
           <p className="text-evolyx-gray mb-4">{t('portfolio.similar_project_cta')}</p>
           <Link
             to="/contact"
-            className="inline-block bg-evolyx-black text-white font-medium px-8 py-4 rounded-sm hover:bg-evolyx-gold transition-colors"
+            className="inline-flex items-center justify-center min-h-11 bg-evolyx-black text-white font-medium px-8 py-4 rounded-sm hover:bg-evolyx-gold hover:text-evolyx-black transition-colors"
           >
             {t('nav.cta')}
           </Link>

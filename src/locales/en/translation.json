@@ -1,4 +1,26 @@
 {
+  "a11y": {
+    "skip_to_content": "Skip to content",
+    "open_menu": "Open menu",
+    "close_menu": "Close menu"
+  },
+  "seo": {
+    "default_title": "EVOLYX Digital — Business software, websites and apps",
+    "default_description": "EVOLYX Digital builds websites, apps and business software for Cameroonian and international companies — including on unstable connections.",
+    "home_title": "EVOLYX Digital — Software that runs your operations",
+    "home_description": "Websites, apps and business tools built for real-world conditions. Cameroon and international.",
+    "services_title": "Services — EVOLYX Digital",
+    "services_description": "Web platforms, mobile apps, business software, automation, existing-app evolution and maintenance.",
+    "portfolio_title": "Portfolio — EVOLYX Digital",
+    "portfolio_description": "Shipped work: real-time messaging, inventory, social-security operations, CMS websites.",
+    "project_title": "{{title}} — EVOLYX Digital portfolio",
+    "about_title": "About — EVOLYX Digital",
+    "about_description": "EVOLYX Digital is the software branch of the EVOLYX group. We digitize operations, not mockups.",
+    "contact_title": "Request a quote — EVOLYX Digital",
+    "contact_description": "Tell us what you need. We reply within 24 business hours by email or WhatsApp.",
+    "legal_title": "Legal notice — EVOLYX Digital",
+    "legal_description": "Legal notice for EVOLYX Digital, software development branch of the EVOLYX group."
+  },
   "nav": {
     "home": "Home",
     "services": "Services",
@@ -8,59 +30,74 @@
     "cta": "Request a quote"
   },
   "hero": {
-    "title_1": "We turn your ideas into",
-    "title_highlight": "digital products",
-    "subtitle": "EVOLYX Digital designs custom websites, mobile apps and software for Cameroonian and international businesses.",
-    "cta_primary": "See our work",
-    "cta_secondary": "Request a quote"
+    "eyebrow": "Business software · Cameroon & international",
+    "title_1": "Software that keeps",
+    "title_highlight": "your operations running",
+    "subtitle": "EVOLYX Digital builds websites, apps and business tools that hold up in the real world — including on an unstable connection.",
+    "cta_primary": "Request a quote",
+    "cta_secondary": "See our work",
+    "stat_1_value": "7",
+    "stat_1_label": "Shipped projects",
+    "stat_2_value": "Real-time",
+    "stat_2_label": "Sync, chat, status",
+    "stat_3_value": "Offline",
+    "stat_3_label": "Built for the field"
   },
   "services": {
     "eyebrow": "What we do",
-    "title": "Solutions built for your business",
-    "subtitle": "From showcase websites to complex business software, we cover the full lifecycle of your digital project.",
+    "title": "Tools for your operations, not templates",
+    "subtitle": "From a site that converts to software that runs inventory, records or checkout: we cover the full project lifecycle.",
     "cta": "View all services"
   },
   "portfolio": {
     "eyebrow": "Our work",
     "title": "Projects, not promises",
-    "subtitle": "Every solution we build answers a real business problem.",
+    "subtitle": "Every solution answers a real business problem.",
     "cta": "View full portfolio",
     "view_project": "View project",
     "back_to_portfolio": "Back to portfolio",
-    "similar_project_cta": "Have a similar project in mind?",
+    "similar_project_cta": "Have a similar problem to solve?",
     "context": "Context",
     "solution": "Solution delivered",
     "highlight": "What makes this project stand out",
-    "stack": "Tech stack"
+    "stack": "Tech stack",
+    "live": "Live",
+    "open_site": "Open site",
+    "preview_note": "The embedded preview may be blocked by the site. Use the button to open it in a new tab."
   },
   "why": {
     "eyebrow": "Why EVOLYX Digital",
-    "title": "A team that builds, not just promises",
-    "point_1_title": "Real technical expertise",
-    "point_1_text": "Live production projects, from real-time systems to data, not mockups.",
-    "point_2_title": "Tailored approach",
-    "point_2_text": "Every solution starts from a real business problem, never a generic template.",
-    "point_3_title": "End-to-end support",
-    "point_3_text": "From needs analysis to maintenance, one point of contact from start to finish."
+    "title": "Built for the field, not the demo",
+    "point_1_title": "Real-time, even on an unstable network",
+    "point_1_text": "Messaging, status, sync: Talky holds up when the connection drops and comes back.",
+    "point_2_title": "Designed to work offline",
+    "point_2_text": "Checkout, inventory, accounting: tools that stay usable without permanent internet.",
+    "point_3_title": "Sensitive operations, structured data",
+    "point_3_text": "Records, contributions, benefits: rigorous modeling, not a dressed-up spreadsheet."
   },
   "process": {
     "eyebrow": "How it works",
     "title": "From first conversation to ongoing support",
     "step_1": "Initial contact",
+    "step_1_text": "WhatsApp, email or the form. We clarify the business problem.",
     "step_2": "Quote & scoping",
+    "step_2_text": "Scope, timeline and budget in writing, before the first line of code.",
     "step_3": "Development",
+    "step_3_text": "Visible iterations. You see progress, you approve.",
     "step_4": "Delivery",
-    "step_5": "Maintenance"
+    "step_4_text": "Go-live, training, documentation that is actually useful.",
+    "step_5": "Maintenance",
+    "step_5_text": "Fixes, evolution, hosting if you want it."
   },
   "cta_final": {
-    "title": "Have a project in mind?",
-    "subtitle": "Let's talk, no strings attached.",
-    "button": "Get in touch"
+    "title": "Have an operation to digitize?",
+    "subtitle": "Describe the problem. We will tell you if we can solve it, and how.",
+    "button": "Request a quote"
   },
   "contact": {
     "eyebrow": "Contact",
     "title": "Let's talk about your project",
-    "subtitle": "Tell us what you need, we'll get back to you within 24 business hours.",
+    "subtitle": "Tell us what you need. We get back to you within 24 business hours.",
     "form": {
       "name": "Full name",
       "company": "Company (optional)",
@@ -73,20 +110,69 @@
       "message": "Describe your needs",
       "submit": "Send request",
       "sending": "Sending...",
-      "success": "Thank you! Your message was sent, we'll get back to you shortly.",
-      "error": "Something went wrong. Please try again or contact us directly by email."
+      "success": "Thank you. Your message was sent — we will get back to you shortly.",
+      "error": "Sending failed. Try again, or reach us by email or WhatsApp.",
+      "not_configured": "The form is not connected yet. Email us at {{email}} or message us on WhatsApp.",
+      "errors": {
+        "name": "Please enter your name (at least 2 characters).",
+        "email": "Please enter a valid email.",
+        "project_type": "Please select a project type.",
+        "budget": "Please select a budget range.",
+        "message": "Please describe your needs (at least 10 characters)."
+      },
+      "types": {
+        "web": "Website",
+        "mobile": "Mobile app",
+        "business": "Business platform",
+        "automation": "Automation / AI",
+        "evolution": "Existing-app evolution",
+        "other": "Other"
+      },
+      "budgets": {
+        "under_500": "< 500,000 XAF",
+        "mid": "500,000 – 1,500,000 XAF",
+        "high": "1,500,000 – 4,000,000 XAF",
+        "enterprise": "> 4,000,000 XAF",
+        "tbd": "To be defined"
+      }
     },
     "direct": "Or reach us directly"
   },
   "footer": {
-    "tagline": "We turn your ideas into digital products.",
+    "tagline": "Software that keeps your operations running.",
     "quick_links": "Quick links",
     "group": "EVOLYX Group",
+    "contact": "Contact",
     "legal": "Legal notice",
     "rights": "All rights reserved."
   },
   "about_page": {
     "title": "About EVOLYX Digital",
-    "intro": "EVOLYX Digital is the software development branch of the EVOLYX group, dedicated to designing custom websites, mobile apps and business software."
+    "intro": "EVOLYX Digital is the software development branch of the EVOLYX group. We design websites, apps and business software for Cameroonian companies, Francophone Africa, and international clients.",
+    "group_title": "One group, a clear role",
+    "group_text": "The EVOLYX group covers several activities. EVOLYX Shop is e-commerce. EVOLYX Digital builds the software: showcase sites, apps, back-offices, business tools. This site is not a store.",
+    "approach_title": "We start from the problem, not a template",
+    "approach_text": "Many agencies sell generic websites. We start from a concrete operation — inventory, records, checkout, messaging — and we ship the tool that runs it, including when the network is unstable.",
+    "values_title": "What we commit to",
+    "value_1_title": "Proof, not slides",
+    "value_1_text": "The portfolio shows products in use, not mockups. If a project is still in progress, we say so.",
+    "value_2_title": "One point of contact, end to end",
+    "value_2_text": "Scoping, build, delivery, maintenance: you are not handed off from a salesperson to an anonymous freelancer.",
+    "value_3_title": "Bilingual, not optional",
+    "value_3_text": "French and English on the site, and in delivery, so we can work with local and international teams."
+  },
+  "legal_page": {
+    "title": "Legal notice",
+    "pending": "To be completed",
+    "publisher": "Publisher",
+    "company": "Name",
+    "parent": "Group",
+    "legal_form": "Legal form",
+    "rccm": "RCCM no.",
+    "niu": "NIU no.",
+    "address": "Registered office",
+    "director": "Publication director",
+    "host": "Hosting",
+    "contact": "Contact"
   }
 }

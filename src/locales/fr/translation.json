@@ -1,4 +1,26 @@
 {
+  "a11y": {
+    "skip_to_content": "Aller au contenu",
+    "open_menu": "Ouvrir le menu",
+    "close_menu": "Fermer le menu"
+  },
+  "seo": {
+    "default_title": "EVOLYX Digital — Logiciels métier, sites et applications",
+    "default_description": "EVOLYX Digital conçoit des sites, applications et logiciels métier pour les entreprises camerounaises et internationales — y compris avec une connexion instable.",
+    "home_title": "EVOLYX Digital — Logiciels qui font tourner votre activité",
+    "home_description": "Sites, applications et outils métier conçus pour le terrain. Cameroun et international.",
+    "services_title": "Services — EVOLYX Digital",
+    "services_description": "Sites et plateformes web, applications mobiles, logiciels métier, automatisation, évolution d'existant et maintenance.",
+    "portfolio_title": "Portfolio — EVOLYX Digital",
+    "portfolio_description": "Projets livrés : messagerie temps réel, gestion de stock, sécurité sociale, sites avec CMS.",
+    "project_title": "{{title}} — Portfolio EVOLYX Digital",
+    "about_title": "À propos — EVOLYX Digital",
+    "about_description": "EVOLYX Digital est la branche logiciel du groupe EVOLYX. Nous digitalisons des opérations, pas des maquettes.",
+    "contact_title": "Demander un devis — EVOLYX Digital",
+    "contact_description": "Décrivez votre besoin. Réponse sous 24h ouvrées par email ou WhatsApp.",
+    "legal_title": "Mentions légales — EVOLYX Digital",
+    "legal_description": "Mentions légales d'EVOLYX Digital, branche développement logiciel du groupe EVOLYX."
+  },
   "nav": {
     "home": "Accueil",
     "services": "Services",
@@ -8,54 +30,69 @@
     "cta": "Demander un devis"
   },
   "hero": {
-    "title_1": "Nous transformons vos idées en",
-    "title_highlight": "produits numériques",
-    "subtitle": "EVOLYX Digital conçoit des sites, applications et logiciels sur mesure pour les entreprises camerounaises et internationales.",
-    "cta_primary": "Voir nos projets",
-    "cta_secondary": "Demander un devis"
+    "eyebrow": "Logiciel métier · Cameroun & international",
+    "title_1": "Des logiciels qui font tourner",
+    "title_highlight": "votre activité",
+    "subtitle": "EVOLYX Digital conçoit des sites, applications et outils métier qui tiennent la route — y compris avec une connexion instable.",
+    "cta_primary": "Demander un devis",
+    "cta_secondary": "Voir nos projets",
+    "stat_1_value": "7",
+    "stat_1_label": "Projets livrés",
+    "stat_2_value": "Temps réel",
+    "stat_2_label": "Synchro, chat, statuts",
+    "stat_3_value": "Hors ligne",
+    "stat_3_label": "Pensé pour le terrain"
   },
   "services": {
     "eyebrow": "Ce que nous faisons",
-    "title": "Des solutions pensées pour votre métier",
-    "subtitle": "Du site vitrine au logiciel métier complexe, nous couvrons l'ensemble du cycle de vie de votre projet digital.",
+    "title": "Des outils pour vos opérations, pas des templates",
+    "subtitle": "Du site qui convertit au logiciel qui gère stock, dossiers ou caisse : nous couvrons le cycle de vie de votre projet.",
     "cta": "Voir tous les services"
   },
   "portfolio": {
     "eyebrow": "Notre travail",
     "title": "Des projets, pas des promesses",
-    "subtitle": "Chaque solution que nous construisons répond à un vrai problème métier.",
+    "subtitle": "Chaque solution répond à un vrai problème métier.",
     "cta": "Voir tout le portfolio",
     "view_project": "Voir le projet",
     "back_to_portfolio": "Retour au portfolio",
-    "similar_project_cta": "Un projet similaire en tête ?",
+    "similar_project_cta": "Un problème similaire à résoudre ?",
     "context": "Contexte",
     "solution": "Solution apportée",
     "highlight": "Ce qui distingue ce projet",
-    "stack": "Stack technique"
+    "stack": "Stack technique",
+    "live": "Live",
+    "open_site": "Ouvrir le site",
+    "preview_note": "L'aperçu intégré peut être bloqué par le site. Utilisez le bouton pour l'ouvrir dans un nouvel onglet."
   },
   "why": {
     "eyebrow": "Pourquoi EVOLYX Digital",
-    "title": "Une équipe qui construit, pas qui promet",
-    "point_1_title": "Expertise technique réelle",
-    "point_1_text": "Des projets en production, du temps réel à la data, pas des maquettes.",
-    "point_2_title": "Approche sur mesure",
-    "point_2_text": "Chaque solution part d'un vrai problème métier, jamais d'un template générique.",
-    "point_3_title": "Accompagnement de bout en bout",
-    "point_3_text": "De l'analyse du besoin à la maintenance, un seul interlocuteur du début à la fin."
+    "title": "On construit pour le terrain, pas pour la démo",
+    "point_1_title": "Temps réel, même réseau instable",
+    "point_1_text": "Messagerie, statuts, synchronisation : Talky tient quand la connexion coupe et revient.",
+    "point_2_title": "Conçu pour le hors-ligne",
+    "point_2_text": "Caisse, stock, compta : des outils qui restent utilisables sans Internet permanent.",
+    "point_3_title": "Métiers sensibles, données structurées",
+    "point_3_text": "Dossiers, cotisations, prestations : modélisation rigoureuse, pas un tableur habillé."
   },
   "process": {
     "eyebrow": "Comment ça marche",
     "title": "De la première discussion à la maintenance",
     "step_1": "Prise de contact",
+    "step_1_text": "WhatsApp, email ou formulaire. On clarifie le problème métier.",
     "step_2": "Devis & cadrage",
+    "step_2_text": "Périmètre, délais et budget par écrit, avant la première ligne de code.",
     "step_3": "Développement",
+    "step_3_text": "Itérations visibles. Vous voyez avancer, vous validez.",
     "step_4": "Livraison",
-    "step_5": "Maintenance"
+    "step_4_text": "Mise en production, formation, documentation utile.",
+    "step_5": "Maintenance",
+    "step_5_text": "Correctifs, évolutions, hébergement si vous le souhaitez."
   },
   "cta_final": {
-    "title": "Un projet en tête ?",
-    "subtitle": "Discutons-en, sans engagement.",
-    "button": "Contactez-nous"
+    "title": "Vous avez un processus à digitaliser ?",
+    "subtitle": "Décrivez le problème. Nous vous disons si on peut le résoudre, et comment.",
+    "button": "Demander un devis"
   },
   "contact": {
     "eyebrow": "Contact",
@@ -73,20 +110,69 @@
       "message": "Décrivez votre besoin",
       "submit": "Envoyer la demande",
       "sending": "Envoi en cours...",
-      "success": "Merci ! Votre message a bien été envoyé, nous revenons vers vous rapidement.",
-      "error": "Une erreur est survenue. Merci de réessayer ou de nous contacter directement par email."
+      "success": "Merci. Votre message a bien été envoyé, nous revenons vers vous rapidement.",
+      "error": "L'envoi a échoué. Réessayez ou contactez-nous par email ou WhatsApp.",
+      "not_configured": "Le formulaire n'est pas encore connecté. Écrivez-nous à {{email}} ou sur WhatsApp.",
+      "errors": {
+        "name": "Indiquez votre nom (2 caractères minimum).",
+        "email": "Indiquez un email valide.",
+        "project_type": "Sélectionnez un type de projet.",
+        "budget": "Sélectionnez une fourchette de budget.",
+        "message": "Décrivez votre besoin (10 caractères minimum)."
+      },
+      "types": {
+        "web": "Site web",
+        "mobile": "Application mobile",
+        "business": "Plateforme métier",
+        "automation": "Automatisation / IA",
+        "evolution": "Évolution d'existant",
+        "other": "Autre"
+      },
+      "budgets": {
+        "under_500": "< 500 000 FCFA",
+        "mid": "500 000 – 1 500 000 FCFA",
+        "high": "1 500 000 – 4 000 000 FCFA",
+        "enterprise": "> 4 000 000 FCFA",
+        "tbd": "À définir"
+      }
     },
     "direct": "Ou contactez-nous directement"
   },
   "footer": {
-    "tagline": "Nous transformons vos idées en produits numériques.",
+    "tagline": "Des logiciels qui font tourner votre activité.",
     "quick_links": "Liens rapides",
     "group": "Groupe EVOLYX",
+    "contact": "Contact",
     "legal": "Mentions légales",
     "rights": "Tous droits réservés."
   },
   "about_page": {
     "title": "À propos d'EVOLYX Digital",
-    "intro": "EVOLYX Digital est la branche développement logiciel du groupe EVOLYX, dédiée à la conception de sites web, applications mobiles et logiciels métiers sur mesure."
+    "intro": "EVOLYX Digital est la branche développement logiciel du groupe EVOLYX. Nous concevons des sites, applications et logiciels métier pour des entreprises camerounaises, africaines francophones, et des clients internationaux.",
+    "group_title": "Une branche, un rôle clair",
+    "group_text": "Le groupe EVOLYX couvre plusieurs activités. EVOLYX Shop est le e-commerce. EVOLYX Digital construit le logiciel : vitrines, applications, back-offices, outils métier. Ce site n'est pas une boutique.",
+    "approach_title": "On part du problème, pas du template",
+    "approach_text": "Beaucoup d'agences vendent des sites génériques. Nous partons d'une opération concrète — stock, dossiers, caisse, messages — et nous livrons l'outil qui la fait tourner, y compris quand le réseau est instable.",
+    "values_title": "Ce à quoi on s'engage",
+    "value_1_title": "Des preuves, pas des slides",
+    "value_1_text": "Le portfolio montre des produits utilisés, pas des maquettes. Si un projet est encore en cours, on le dit.",
+    "value_2_title": "Un interlocuteur, de bout en bout",
+    "value_2_text": "Cadrage, développement, livraison, maintenance : vous n'êtes pas renvoyé d'un commercial à un freelance anonyme.",
+    "value_3_title": "Bilingue, sans option",
+    "value_3_text": "Français et anglais sur le site, et dans la livraison, pour travailler avec des équipes locales et internationales."
+  },
+  "legal_page": {
+    "title": "Mentions légales",
+    "pending": "À renseigner",
+    "publisher": "Éditeur",
+    "company": "Dénomination",
+    "parent": "Groupe",
+    "legal_form": "Forme juridique",
+    "rccm": "N° RCCM",
+    "niu": "N° NIU",
+    "address": "Siège social",
+    "director": "Directeur de publication",
+    "host": "Hébergement",
+    "contact": "Contact"
   }
 }

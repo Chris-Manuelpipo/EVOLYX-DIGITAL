@@ -1,4 +1,4 @@
-import evolyxIcon from '../../assets/images/evolyx-icon.png';
+import evolyxIcon from '../../assets/images/evolyx-icon.svg';
 
 export default function LogoMark({ size = 30 }) {
   return (

@@ -19,7 +19,6 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const isHome = pathname === '/';
-  // Transparent + light text only on the homepage hero, before scrolling.
   const transparentMode = isHome && !scrolled;
 
   useEffect(() => {
@@ -33,14 +32,30 @@ export default function Header() {
     setMenuOpen(false);
   }, [pathname]);
 
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? 'hidden' : '';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [menuOpen]);
+
+  useEffect(() => {
+    if (!menuOpen) return undefined;
+    const onKey = (event) => {
+      if (event.key === 'Escape') setMenuOpen(false);
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [menuOpen]);
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        transparentMode ? 'bg-transparent py-6' : 'bg-white/95 backdrop-blur shadow-sm py-3'
+        transparentMode ? 'bg-transparent py-6' : 'bg-white/95 backdrop-blur py-3'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2.5">
+        <Link to="/" className="flex items-center gap-2.5 min-h-11">
           <LogoMark size={26} />
           <span
             className={`font-display text-lg font-bold tracking-tight ${
@@ -51,18 +66,18 @@ export default function Header() {
           </span>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-8" aria-label="Main">
           {navItems.map((item) => (
             <NavLink
               key={item.key}
               to={item.to}
               className={({ isActive }) =>
-                `text-sm font-medium transition-colors hover:text-evolyx-gold ${
+                `text-sm font-medium transition-colors hover:text-evolyx-gold min-h-11 inline-flex items-center ${
                   isActive
                     ? 'text-evolyx-gold'
                     : transparentMode
-                    ? 'text-white/85'
-                    : 'text-evolyx-black'
+                      ? 'text-white/85'
+                      : 'text-evolyx-black'
                 }`
               }
             >
@@ -75,10 +90,10 @@ export default function Header() {
           <LanguageSwitcher transparent={transparentMode} />
           <Link
             to="/contact"
-            className={`text-sm font-medium px-5 py-2.5 rounded-sm transition-colors ${
+            className={`text-sm font-medium px-5 py-2.5 min-h-11 inline-flex items-center rounded-sm transition-colors ${
               transparentMode
                 ? 'border border-evolyx-gold text-evolyx-gold hover:bg-evolyx-gold hover:text-evolyx-black-deep'
-                : 'bg-evolyx-black text-white hover:bg-evolyx-gold'
+                : 'bg-evolyx-black text-white hover:bg-evolyx-gold hover:text-evolyx-black'
             }`}
           >
             {t('nav.cta')}
@@ -86,21 +101,29 @@ export default function Header() {
         </div>
 
         <button
-          className={`md:hidden text-xl ${transparentMode ? 'text-white' : 'text-evolyx-black'}`}
+          type="button"
+          className={`md:hidden inline-flex items-center justify-center min-h-11 min-w-11 text-xl ${
+            transparentMode ? 'text-white' : 'text-evolyx-black'
+          }`}
           onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Menu"
+          aria-expanded={menuOpen}
+          aria-controls="mobile-menu"
+          aria-label={menuOpen ? t('a11y.close_menu') : t('a11y.open_menu')}
         >
           {menuOpen ? <FaTimes /> : <FaBars />}
         </button>
       </div>
 
       {menuOpen && (
-        <div className="md:hidden bg-white border-t border-evolyx-black/10 mt-4 px-6 py-6 flex flex-col gap-4">
+        <div
+          id="mobile-menu"
+          className="md:hidden bg-white border-t border-evolyx-black/10 mt-4 px-6 py-6 flex flex-col gap-2"
+        >
           {navItems.map((item) => (
             <NavLink
               key={item.key}
               to={item.to}
-              className="text-evolyx-black text-base font-medium"
+              className="text-evolyx-black text-base font-medium min-h-11 inline-flex items-center"
             >
               {t(`nav.${item.key}`)}
             </NavLink>
@@ -108,7 +131,7 @@ export default function Header() {
           <LanguageSwitcher />
           <Link
             to="/contact"
-            className="bg-evolyx-black text-white text-center text-sm font-medium px-5 py-3 rounded-sm"
+            className="bg-evolyx-black text-white text-center text-sm font-medium px-5 py-3 min-h-11 rounded-sm hover:bg-evolyx-gold hover:text-evolyx-black"
           >
             {t('nav.cta')}
           </Link>

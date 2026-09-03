@@ -8,7 +8,7 @@
   --color-evolyx-gold-dark: #B8952C;
   --color-evolyx-black: #1A1A1A;
   --color-evolyx-black-deep: #141414;
-  --color-evolyx-gray: #6E6E6E;
+  --color-evolyx-gray: #4F4F4F;
   --color-evolyx-gray-light: #A8A8A8;
   --color-evolyx-bg: #F7F6F3;
   --color-evolyx-white: #FFFFFF;
@@ -16,12 +16,22 @@
   /* Typographie */
   --font-display: 'Playfair Display', serif;
   --font-body: 'Inter', sans-serif;
+
+  --radius-sm: 2px;
+  --radius-lg: 2px;
+  --radius-xl: 2px;
+  --radius-2xl: 2px;
+  --radius-3xl: 2px;
 }
 
 body {
   font-family: var(--font-body);
   color: var(--color-evolyx-black);
   background-color: var(--color-evolyx-white);
+}
+
+#main-content:focus {
+  outline: none;
 }
 
 h1, h2, h3, h4, .font-display {

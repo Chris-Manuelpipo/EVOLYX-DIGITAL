@@ -1,4 +1,4 @@
-import evolyxIcon from '../../assets/images/evolyx-icon.png';
+import evolyxIcon from '../../assets/images/evolyx-icon.svg';
 
 // Le symbole EVOLYX (logo officiel), utilisé en grand comme signature visuelle du hero
 // et comme motif décoratif à travers le site.

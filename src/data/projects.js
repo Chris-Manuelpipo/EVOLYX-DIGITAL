@@ -1,5 +1,6 @@
 // Données du portfolio EVOLYX Digital
-// Textes rédigés en premier jet -- à relire et personnaliser avant mise en ligne
+// image : chemin public optionnel, ex. '/portfolio/talky.webp' (déposer le fichier dans public/portfolio/)
+// url : preview live si le site est public
 
 export const projects = [
   {
@@ -10,15 +11,15 @@ export const projects = [
     stack: ['Flutter', 'Node.js', 'Socket.IO', 'PostgreSQL'],
     featured: true,
     context: {
-      fr: "Talky est une application de messagerie mobile pensée pour offrir une expérience de discussion fluide et instantanée, avec statuts de message en temps réel (envoyé, distribué, lu).",
+      fr: "Talky est une application de messagerie mobile pensée pour une discussion fluide et instantanée, avec statuts de message en temps réel (envoyé, distribué, lu).",
       en: 'Talky is a mobile messaging application designed for a fluid, instant chat experience, with real-time message status (sent, delivered, read).',
     },
     solution: {
-      fr: "Développement d'une application Flutter connectée à Alanya, un backend Node.js/Socket.IO gérant les connexions temps réel, la synchronisation des statuts de messages et l'authentification sécurisée.",
-      en: 'Built a Flutter application connected to Alanya, a Node.js/Socket.IO backend handling real-time connections, message status synchronization and secure authentication.',
+      fr: "Application Flutter connectée à Alanya, un backend Node.js/Socket.IO qui gère les connexions temps réel, la synchronisation des statuts et l'authentification sécurisée.",
+      en: 'A Flutter app connected to Alanya, a Node.js/Socket.IO backend handling real-time connections, message-status synchronization and secure authentication.',
     },
     highlight: {
-      fr: "Gestion fine de la synchronisation temps réel entre client mobile et serveur, y compris en conditions réseau instables.",
+      fr: "Synchronisation fine entre client mobile et serveur, y compris en conditions réseau instables.",
       en: 'Fine-grained real-time synchronization between mobile client and server, including under unstable network conditions.',
     },
   },
@@ -30,16 +31,16 @@ export const projects = [
     stack: ['FastAPI', 'PostgreSQL', 'React', 'Vite'],
     featured: true,
     context: {
-      fr: "Les universités camerounaises manquent d'un espace centralisé pour partager et retrouver facilement les travaux académiques produits localement.",
-      en: 'Cameroonian universities lack a centralized space to easily share and find locally produced academic work.',
+      fr: "Les universités camerounaises manquent d'un espace centralisé pour partager et retrouver les travaux académiques produits localement.",
+      en: 'Cameroonian universities lack a centralized space to share and find locally produced academic work.',
     },
     solution: {
-      fr: "Plateforme de dépôt académique en accès ouvert avec recherche plein texte avancée sur PostgreSQL, développée lors du Hackathon J.U.I.N 2026, avec un backend FastAPI et un frontend React/Vite.",
-      en: 'Open-access academic repository platform with advanced full-text search on PostgreSQL, built during the J.U.I.N 2026 Hackathon, with a FastAPI backend and React/Vite frontend.',
+      fr: "Plateforme de dépôt académique en accès ouvert, recherche plein texte sur PostgreSQL, backend FastAPI et frontend React/Vite.",
+      en: 'Open-access academic repository with full-text search on PostgreSQL, a FastAPI backend and a React/Vite frontend.',
     },
     highlight: {
-      fr: "Recherche plein texte performante, conçue pour un passage à l'échelle sur de gros volumes de documents.",
-      en: 'High-performance full-text search, designed to scale across large document volumes.',
+      fr: "Recherche plein texte conçue pour passer à l'échelle sur de gros volumes de documents.",
+      en: 'Full-text search designed to scale across large document volumes.',
     },
   },
   {
@@ -50,16 +51,16 @@ export const projects = [
     stack: ['React', 'TypeScript', 'Tailwind CSS', 'Zustand'],
     featured: true,
     context: {
-      fr: "Les PME qui gèrent des stocks physiques ont besoin d'un outil clair pour suivre leurs entrées, sorties, niveaux d'alerte et mouvements, sans complexité inutile.",
+      fr: "Les PME qui gèrent des stocks physiques ont besoin d'un outil clair pour suivre entrées, sorties, alertes et mouvements, sans complexité inutile.",
       en: 'SMEs managing physical inventory need a clear tool to track stock in/out, alert levels and movements without unnecessary complexity.',
     },
     solution: {
-      fr: "Application de gestion de stock complète : tableau de bord avec indicateurs clés, gestion des produits, suivi des mouvements, alertes de stock bas, rapports et calendrier des opérations.",
-      en: 'Complete inventory management application: KPI dashboard, product management, movement tracking, low-stock alerts, reports and operations calendar.',
+      fr: "Application de gestion de stock : tableau de bord, produits, mouvements, alertes de stock bas, rapports et calendrier des opérations.",
+      en: 'Inventory application: KPI dashboard, product management, movement tracking, low-stock alerts, reports and operations calendar.',
     },
     highlight: {
-      fr: "Interface moderne et réactive, pensée pour un usage quotidien rapide en contexte commercial.",
-      en: 'Modern, responsive interface designed for fast daily use in a retail context.',
+      fr: "Interface pensée pour un usage quotidien rapide en contexte commercial.",
+      en: 'Interface designed for fast daily use in a retail context.',
     },
   },
   {
@@ -67,15 +68,15 @@ export const projects = [
     category: 'desktop',
     title: 'Mini Marché',
     subtitle: { fr: "Application desktop de gestion d'épicerie", en: 'Desktop grocery store management app' },
-    stack: ['Desktop App'],
+    stack: ['Application native', 'Hors ligne'],
     featured: false,
     context: {
-      fr: "Les petites épiceries de quartier ont besoin d'un outil simple et local pour gérer leurs ventes et leur stock, sans dépendre d'une connexion Internet permanente.",
+      fr: "Les petites épiceries de quartier ont besoin d'un outil simple et local pour gérer ventes et stock, sans connexion Internet permanente.",
       en: 'Small neighborhood grocery stores need a simple, local tool to manage sales and inventory, without depending on a permanent internet connection.',
     },
     solution: {
-      fr: "Application desktop autonome pour la gestion quotidienne d'une épicerie : ventes, inventaire et suivi des produits, fonctionnant sans connexion permanente.",
-      en: 'Standalone desktop application for daily grocery store management: sales, inventory and product tracking, working without a permanent connection.',
+      fr: "Application desktop autonome : ventes, inventaire et suivi des produits, utilisable sans connexion permanente.",
+      en: 'Standalone desktop application: sales, inventory and product tracking, usable without a permanent connection.',
     },
     highlight: {
       fr: "Fonctionne en local, adapté aux commerces avec un accès Internet limité.",
@@ -86,21 +87,21 @@ export const projects = [
     slug: 'jk-it-solutions',
     category: 'web',
     title: 'JK IT Solutions',
-    subtitle: { fr: 'Site vitrine complet avec CMS', en: 'Full showcase website with CMS' },
-    stack: ['CMS', 'Web'],
+    subtitle: { fr: 'Site vitrine avec CMS', en: 'Showcase website with CMS' },
+    stack: ['CMS', 'Vercel'],
     featured: false,
     url: 'https://jk-it-solutions.vercel.app/',
     context: {
-      fr: "Une entreprise IT avait besoin d'un site vitrine professionnel, mais aussi de la liberté de mettre à jour son contenu sans dépendre d'un développeur à chaque changement.",
-      en: 'An IT company needed a professional showcase website, but also the freedom to update its content without depending on a developer for every change.',
+      fr: "Une entreprise IT avait besoin d'un site vitrine professionnel, et de la liberté de mettre à jour son contenu sans développeur à chaque changement.",
+      en: 'An IT company needed a professional showcase website, and the freedom to update content without a developer for every change.',
     },
     solution: {
-      fr: "Site vitrine complet avec système de gestion de contenu (CMS) intégré, permettant au client de modifier lui-même ses pages, services et actualités.",
-      en: 'Full showcase website with an integrated content management system (CMS), letting the client edit their own pages, services and news.',
+      fr: "Site vitrine avec CMS intégré : le client modifie lui-même pages, services et actualités.",
+      en: 'Showcase website with an integrated CMS: the client edits pages, services and news themselves.',
     },
     highlight: {
-      fr: "Autonomie totale du client sur la mise à jour du contenu, sans intervention technique.",
-      en: 'Full client autonomy over content updates, with no technical intervention needed.',
+      fr: "Autonomie du client sur le contenu, sans intervention technique à chaque mise à jour.",
+      en: 'Client autonomy over content, with no technical intervention for each update.',
     },
   },
   {
@@ -108,16 +109,16 @@ export const projects = [
     category: 'business',
     title: 'OSS',
     subtitle: { fr: "Gestion d'un organisme de sécurité sociale", en: 'Social security organization management' },
-    stack: ['JavaFX', 'PostgreSQL', 'Web'],
+    stack: ['JavaFX', 'PostgreSQL', 'React'],
     featured: false,
     url: 'https://gestion-ss-app.vercel.app/',
     context: {
-      fr: "Les organismes de sécurité sociale gèrent des volumes importants de dossiers d'assurés, de cotisations et de prestations, nécessitant un système fiable et structuré.",
-      en: 'Social security organizations manage large volumes of member records, contributions and benefits, requiring a reliable, structured system.',
+      fr: "Les organismes de sécurité sociale gèrent des volumes importants de dossiers d'assurés, de cotisations et de prestations : il faut un système fiable et structuré.",
+      en: 'Social security organizations manage large volumes of member records, contributions and benefits, and need a reliable, structured system.',
     },
     solution: {
-      fr: "Application de gestion complète pour un organisme de sécurité sociale, couvrant la gestion des assurés, des cotisations et des prestations, avec une base de données PostgreSQL robuste.",
-      en: 'Complete management application for a social security organization, covering member records, contributions and benefits, backed by a robust PostgreSQL database.',
+      fr: "Application de gestion complète : assurés, cotisations et prestations, avec une base PostgreSQL robuste et une interface web.",
+      en: 'Complete management application: members, contributions and benefits, backed by PostgreSQL and a web interface.',
     },
     highlight: {
       fr: "Modélisation rigoureuse des données pour un domaine réglementé et sensible.",
@@ -128,7 +129,7 @@ export const projects = [
     slug: 'pme-compta',
     category: 'fintech',
     title: 'PME Compta',
-    subtitle: { fr: 'MVP fintech pour la comptabilité des PME', en: 'Fintech MVP for SME accounting' },
+    subtitle: { fr: 'Comptabilité simplifiée pour PME', en: 'Simplified accounting for SMEs' },
     stack: ['React', 'Vite', 'FastAPI', 'Dexie.js'],
     featured: false,
     context: {
@@ -136,12 +137,12 @@ export const projects = [
       en: 'Many African SMEs still manage their accounting informally, for lack of tools suited to their reality.',
     },
     solution: {
-      fr: "MVP développé lors d'un hackathon fintech : outil de comptabilité simplifié pour PME, avec stockage local (Dexie.js) pour un fonctionnement fluide même en connexion limitée.",
-      en: 'MVP built during a fintech hackathon: simplified accounting tool for SMEs, with local storage (Dexie.js) for smooth operation even with limited connectivity.',
+      fr: "Outil de comptabilité simplifié pour PME, avec stockage local (Dexie.js) pour rester fluide même en connexion limitée.",
+      en: 'Simplified accounting tool for SMEs, with local storage (Dexie.js) so it stays usable even with limited connectivity.',
     },
     highlight: {
-      fr: "Conçu pour fonctionner même avec une connexion Internet instable, contrainte réelle du terrain.",
-      en: 'Designed to work even with unstable internet connectivity, a real field constraint.',
+      fr: "Conçu pour fonctionner avec une connexion Internet instable, contrainte réelle du terrain.",
+      en: 'Designed to work with unstable internet connectivity, a real field constraint.',
     },
   },
 ];
@@ -154,3 +155,9 @@ export const categories = [
   { id: 'desktop', label: { fr: 'Desktop', en: 'Desktop' } },
   { id: 'fintech', label: { fr: 'Fintech', en: 'Fintech' } },
 ];
+
+export function getCategoryLabel(categoryId, lang) {
+  const category = categories.find((item) => item.id === categoryId);
+  if (!category) return categoryId;
+  return category.label[lang] || category.label.fr;
+}

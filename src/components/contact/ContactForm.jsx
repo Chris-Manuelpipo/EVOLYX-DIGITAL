@@ -1,44 +1,83 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { useTranslation } from 'react-i18next';
 import emailjs from '@emailjs/browser';
+import { contact } from '../../data/contact';
 
-// Configuration EmailJS -- à renseigner avec vos identifiants
-// Créer un compte gratuit sur https://www.emailjs.com/
-const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID';
-const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
-const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY';
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID || '';
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || '';
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || '';
 
-const contactSchema = z.object({
-  name: z.string().min(2, 'Nom trop court'),
-  company: z.string().optional(),
-  email: z.string().email('Email invalide'),
-  phone: z.string().optional(),
-  projectType: z.string().min(1, 'Sélectionnez un type de projet'),
-  budget: z.string().min(1, 'Sélectionnez un budget'),
-  message: z.string().min(10, 'Décrivez votre besoin (10 caractères minimum)'),
-});
+const PROJECT_TYPE_KEYS = ['web', 'mobile', 'business', 'automation', 'evolution', 'other'];
+const BUDGET_KEYS = ['under_500', 'mid', 'high', 'enterprise', 'tbd'];
+
+function isEmailJsConfigured() {
+  const values = [EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, EMAILJS_PUBLIC_KEY];
+  return values.every((value) => value && !value.includes('YOUR_') && value.trim().length > 0);
+}
 
 export default function ContactForm() {
   const { t } = useTranslation();
-  const [status, setStatus] = useState('idle'); // idle | sending | success | error
+  const [status, setStatus] = useState('idle');
+
+  const schema = useMemo(
+    () =>
+      z.object({
+        name: z.string().min(2, t('contact.form.errors.name')),
+        company: z.string().optional(),
+        email: z.string().email(t('contact.form.errors.email')),
+        phone: z.string().optional(),
+        projectType: z.string().min(1, t('contact.form.errors.project_type')),
+        budget: z.string().min(1, t('contact.form.errors.budget')),
+        message: z.string().min(10, t('contact.form.errors.message')),
+      }),
+    [t],
+  );
 
   const {
     register,
     handleSubmit,
     reset,
+    setFocus,
     formState: { errors },
-  } = useForm({ resolver: zodResolver(contactSchema) });
+  } = useForm({
+    resolver: zodResolver(schema),
+    defaultValues: {
+      name: '',
+      company: '',
+      email: '',
+      phone: '',
+      projectType: '',
+      budget: '',
+      message: '',
+    },
+  });
 
-  const projectTypes = ['Site web', 'Application mobile', 'Plateforme métier', 'Automatisation/IA', 'Évolution d\'existant', 'Autre'];
-  const budgets = ['< 500 000 FCFA', '500 000 - 1 500 000 FCFA', '1 500 000 - 4 000 000 FCFA', '> 4 000 000 FCFA', 'À définir'];
+  const onInvalid = (formErrors) => {
+    const first = Object.keys(formErrors)[0];
+    if (first) setFocus(first);
+  };
 
   const onSubmit = async (data) => {
+    if (!isEmailJsConfigured()) {
+      setStatus('unconfigured');
+      return;
+    }
+
     setStatus('sending');
     try {
-      await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, data, EMAILJS_PUBLIC_KEY);
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          ...data,
+          projectTypeLabel: t(`contact.form.types.${data.projectType}`),
+          budgetLabel: t(`contact.form.budgets.${data.budget}`),
+        },
+        EMAILJS_PUBLIC_KEY,
+      );
       setStatus('success');
       reset();
     } catch (err) {
@@ -48,83 +87,172 @@ export default function ContactForm() {
   };
 
   const inputClass =
-    'w-full border border-evolyx-black/15 rounded-xl px-4 py-3 text-sm focus:border-evolyx-gold focus:outline-none transition-colors';
+    'w-full min-h-11 border border-evolyx-black/15 rounded-sm px-4 py-3 text-sm focus:border-evolyx-gold focus:outline-none transition-colors';
   const labelClass = 'block text-sm font-medium text-evolyx-black mb-1.5';
-  const errorClass = 'text-xs text-red-600 mt-1';
+  const errorClass = 'text-xs text-red-700 mt-1';
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
+    <form onSubmit={handleSubmit(onSubmit, onInvalid)} className="space-y-5" noValidate>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <div>
-          <label className={labelClass}>{t('contact.form.name')} *</label>
-          <input {...register('name')} className={inputClass} />
-          {errors.name && <p className={errorClass}>{errors.name.message}</p>}
+          <label htmlFor="name" className={labelClass}>
+            {t('contact.form.name')} *
+          </label>
+          <input
+            id="name"
+            autoComplete="name"
+            aria-invalid={errors.name ? 'true' : 'false'}
+            aria-describedby={errors.name ? 'name-error' : undefined}
+            {...register('name')}
+            className={inputClass}
+          />
+          {errors.name && (
+            <p id="name-error" className={errorClass} role="alert">
+              {errors.name.message}
+            </p>
+          )}
         </div>
         <div>
-          <label className={labelClass}>{t('contact.form.company')}</label>
-          <input {...register('company')} className={inputClass} />
+          <label htmlFor="company" className={labelClass}>
+            {t('contact.form.company')}
+          </label>
+          <input id="company" autoComplete="organization" {...register('company')} className={inputClass} />
         </div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <div>
-          <label className={labelClass}>{t('contact.form.email')} *</label>
-          <input type="email" {...register('email')} className={inputClass} />
-          {errors.email && <p className={errorClass}>{errors.email.message}</p>}
+          <label htmlFor="email" className={labelClass}>
+            {t('contact.form.email')} *
+          </label>
+          <input
+            id="email"
+            type="email"
+            autoComplete="email"
+            aria-invalid={errors.email ? 'true' : 'false'}
+            aria-describedby={errors.email ? 'email-error' : undefined}
+            {...register('email')}
+            className={inputClass}
+          />
+          {errors.email && (
+            <p id="email-error" className={errorClass} role="alert">
+              {errors.email.message}
+            </p>
+          )}
         </div>
         <div>
-          <label className={labelClass}>{t('contact.form.phone')}</label>
-          <input {...register('phone')} className={inputClass} />
+          <label htmlFor="phone" className={labelClass}>
+            {t('contact.form.phone')}
+          </label>
+          <input
+            id="phone"
+            type="tel"
+            autoComplete="tel"
+            {...register('phone')}
+            className={inputClass}
+          />
         </div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <div>
-          <label className={labelClass}>{t('contact.form.project_type')} *</label>
-          <select {...register('projectType')} className={inputClass} defaultValue="">
-            <option value="" disabled>{t('contact.form.project_type_placeholder')}</option>
-            {projectTypes.map((type) => (
-              <option key={type} value={type}>{type}</option>
+          <label htmlFor="projectType" className={labelClass}>
+            {t('contact.form.project_type')} *
+          </label>
+          <select
+            id="projectType"
+            aria-invalid={errors.projectType ? 'true' : 'false'}
+            aria-describedby={errors.projectType ? 'projectType-error' : undefined}
+            {...register('projectType')}
+            className={inputClass}
+          >
+            <option value="" disabled>
+              {t('contact.form.project_type_placeholder')}
+            </option>
+            {PROJECT_TYPE_KEYS.map((key) => (
+              <option key={key} value={key}>
+                {t(`contact.form.types.${key}`)}
+              </option>
             ))}
           </select>
-          {errors.projectType && <p className={errorClass}>{errors.projectType.message}</p>}
+          {errors.projectType && (
+            <p id="projectType-error" className={errorClass} role="alert">
+              {errors.projectType.message}
+            </p>
+          )}
         </div>
         <div>
-          <label className={labelClass}>{t('contact.form.budget')} *</label>
-          <select {...register('budget')} className={inputClass} defaultValue="">
-            <option value="" disabled>{t('contact.form.budget_placeholder')}</option>
-            {budgets.map((b) => (
-              <option key={b} value={b}>{b}</option>
+          <label htmlFor="budget" className={labelClass}>
+            {t('contact.form.budget')} *
+          </label>
+          <select
+            id="budget"
+            aria-invalid={errors.budget ? 'true' : 'false'}
+            aria-describedby={errors.budget ? 'budget-error' : undefined}
+            {...register('budget')}
+            className={inputClass}
+          >
+            <option value="" disabled>
+              {t('contact.form.budget_placeholder')}
+            </option>
+            {BUDGET_KEYS.map((key) => (
+              <option key={key} value={key}>
+                {t(`contact.form.budgets.${key}`)}
+              </option>
             ))}
           </select>
-          {errors.budget && <p className={errorClass}>{errors.budget.message}</p>}
+          {errors.budget && (
+            <p id="budget-error" className={errorClass} role="alert">
+              {errors.budget.message}
+            </p>
+          )}
         </div>
       </div>
 
       <div>
-        <label className={labelClass}>{t('contact.form.message')} *</label>
-        <textarea {...register('message')} rows={5} className={inputClass} />
-        {errors.message && <p className={errorClass}>{errors.message.message}</p>}
+        <label htmlFor="message" className={labelClass}>
+          {t('contact.form.message')} *
+        </label>
+        <textarea
+          id="message"
+          rows={5}
+          aria-invalid={errors.message ? 'true' : 'false'}
+          aria-describedby={errors.message ? 'message-error' : undefined}
+          {...register('message')}
+          className={inputClass}
+        />
+        {errors.message && (
+          <p id="message-error" className={errorClass} role="alert">
+            {errors.message.message}
+          </p>
+        )}
       </div>
 
       <button
         type="submit"
         disabled={status === 'sending'}
-        className="w-full bg-evolyx-black text-white font-medium px-8 py-4 rounded-sm hover:bg-evolyx-gold transition-colors disabled:opacity-60"
+        className="w-full min-h-11 bg-evolyx-black text-white font-medium px-8 py-4 rounded-sm hover:bg-evolyx-gold hover:text-evolyx-black transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
       >
         {status === 'sending' ? t('contact.form.sending') : t('contact.form.submit')}
       </button>
 
-      {status === 'success' && (
-        <p className="text-sm text-green-700 bg-green-50 rounded-lg px-4 py-3">
-          {t('contact.form.success')}
-        </p>
-      )}
-      {status === 'error' && (
-        <p className="text-sm text-red-700 bg-red-50 rounded-lg px-4 py-3">
-          {t('contact.form.error')}
-        </p>
-      )}
+      <div aria-live="polite">
+        {status === 'success' && (
+          <p className="text-sm text-green-800 bg-green-50 border border-green-200 rounded-sm px-4 py-3">
+            {t('contact.form.success')}
+          </p>
+        )}
+        {status === 'error' && (
+          <p className="text-sm text-red-800 bg-red-50 border border-red-200 rounded-sm px-4 py-3" role="alert">
+            {t('contact.form.error')}
+          </p>
+        )}
+        {status === 'unconfigured' && (
+          <p className="text-sm text-evolyx-black bg-evolyx-bg border border-evolyx-gold/40 rounded-sm px-4 py-3" role="alert">
+            {t('contact.form.not_configured', { email: contact.email })}
+          </p>
+        )}
+      </div>
     </form>
   );
 }

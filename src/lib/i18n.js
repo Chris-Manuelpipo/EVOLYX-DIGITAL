@@ -15,11 +15,22 @@ i18n
     },
     fallbackLng: 'fr',
     supportedLngs: ['fr', 'en'],
+    nonExplicitSupportedLngs: true,
     interpolation: { escapeValue: false },
     detection: {
       order: ['localStorage', 'navigator'],
       caches: ['localStorage'],
     },
   });
+
+i18n.on('languageChanged', (lng) => {
+  if (typeof document !== 'undefined') {
+    document.documentElement.lang = lng.startsWith('en') ? 'en' : 'fr';
+  }
+});
+
+if (typeof document !== 'undefined') {
+  document.documentElement.lang = i18n.language?.startsWith('en') ? 'en' : 'fr';
+}
 
 export default i18n;

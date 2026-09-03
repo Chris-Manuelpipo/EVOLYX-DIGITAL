@@ -18,6 +18,7 @@ export default function PortfolioPreview() {
           <h2 className="font-display text-3xl md:text-4xl font-bold text-evolyx-black leading-tight">
             {t('portfolio.title')}
           </h2>
+          <p className="mt-4 text-evolyx-gray leading-relaxed">{t('portfolio.subtitle')}</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-7 mb-12">
@@ -28,7 +29,7 @@ export default function PortfolioPreview() {
 
         <Link
           to="/portfolio"
-          className="inline-flex items-center gap-2 text-evolyx-black font-medium hover:text-evolyx-gold transition-colors"
+          className="inline-flex items-center gap-2 text-evolyx-black font-medium hover:text-evolyx-gold transition-colors min-h-11"
         >
           {t('portfolio.cta')} <FaArrowRight className="text-sm" />
         </Link>
