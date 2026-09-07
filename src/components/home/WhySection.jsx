@@ -1,40 +1,53 @@
 import { useTranslation } from 'react-i18next';
-import { FaBolt, FaWifi, FaBalanceScale } from 'react-icons/fa';
+import { FiZap, FiWifiOff, FiShield } from 'react-icons/fi';
+import Reveal from '../ui/Reveal';
+import Headline from '../ui/Headline';
+import SectionLabel from '../ui/SectionLabel';
 
-const points = [
-  { icon: FaBolt, key: 'point_1' },
-  { icon: FaWifi, key: 'point_2' },
-  { icon: FaBalanceScale, key: 'point_3' },
+const POINTS = [
+  { key: 'point_1', icon: FiZap },
+  { key: 'point_2', icon: FiWifiOff },
+  { key: 'point_3', icon: FiShield },
 ];
 
 export default function WhySection() {
   const { t } = useTranslation();
 
   return (
-    <section className="py-24 px-6">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center max-w-2xl mx-auto mb-14">
-          <p className="text-sm font-semibold tracking-[0.2em] text-evolyx-gold-dark uppercase mb-3">
-            {t('why.eyebrow')}
-          </p>
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-evolyx-black">
-            {t('why.title')}
-          </h2>
-        </div>
+    <section className="border-t border-outline bg-surface py-20 md:py-28">
+      <div className="mx-auto max-w-7xl px-5 lg:px-8">
+        <Reveal className="mb-12 max-w-2xl">
+          <SectionLabel className="mb-5">{t('why.eyebrow')}</SectionLabel>
+          <Headline
+            lines={t('why.title_lines', { returnObjects: true })}
+            start={80}
+            accentIndex={1}
+            className="display text-[clamp(1.75rem,3.6vw,2.6rem)] text-on-surface"
+          />
+        </Reveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-          {points.map(({ icon: Icon, key }) => (
-            <div key={key} className="text-center">
-              <div className="w-14 h-14 mx-auto rounded-sm bg-evolyx-black flex items-center justify-center text-evolyx-gold text-xl mb-5">
-                <Icon aria-hidden="true" />
-              </div>
-              <h3 className="font-display font-bold text-lg text-evolyx-black mb-2">
+        <Reveal className="grid grid-cols-1 gap-5 md:grid-cols-3">
+          {POINTS.map(({ key, icon: Icon }, index) => (
+            <div
+              key={key}
+              className="card r-rise p-6"
+              style={{ '--d': `${index * 90}ms` }}
+            >
+              <span
+                className="inline-flex h-11 w-11 items-center justify-center rounded-md bg-gold/12 text-[19px] text-gold-text"
+                aria-hidden="true"
+              >
+                <Icon />
+              </span>
+              <h3 className="mt-5 text-[17px] font-semibold text-on-surface">
                 {t(`why.${key}_title`)}
               </h3>
-              <p className="text-sm text-evolyx-gray leading-relaxed">{t(`why.${key}_text`)}</p>
+              <p className="mt-2 text-sm leading-relaxed text-on-variant">
+                {t(`why.${key}_text`)}
+              </p>
             </div>
           ))}
-        </div>
+        </Reveal>
       </div>
     </section>
   );

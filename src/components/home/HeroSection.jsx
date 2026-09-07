@@ -1,10 +1,33 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { FaArrowRight } from 'react-icons/fa';
-import HexFacet from '../ui/HexFacet';
+import { FiArrowRight } from 'react-icons/fi';
+import { FaWhatsapp } from 'react-icons/fa';
+import { projects } from '../../data/projects';
+import { contact } from '../../data/contact';
+import Reveal from '../ui/Reveal';
+import Headline from '../ui/Headline';
+import LogoMark from '../ui/LogoMark';
+import BrowserFrame from '../ui/BrowserFrame';
+import ProjectCover from '../portfolio/ProjectCover';
+
+function hostname(url) {
+  try {
+    return new URL(url).hostname.replace(/^www\./, '');
+  } catch {
+    return url;
+  }
+}
 
 export default function HeroSection() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const lang = i18n.language.startsWith('en') ? 'en' : 'fr';
+
+  // Le visuel du héros est une capture réelle, pas une illustration : le premier
+  // écran doit déjà prouver quelque chose. On prend le premier projet mis en
+  // avant qui dispose d'une capture.
+  const showcase =
+    projects.find((project) => project.featured && project.image) ||
+    projects.find((project) => project.image);
 
   const stats = [
     { value: t('hero.stat_1_value'), label: t('hero.stat_1_label') },
@@ -13,57 +36,100 @@ export default function HeroSection() {
   ];
 
   return (
-    <section className="relative bg-evolyx-black-deep pt-32 pb-0 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] items-center gap-10 relative z-[3] pb-20">
-        <div>
-          <div className="flex items-center gap-3 mb-7">
-            <span className="w-10 h-0.5 bg-evolyx-gold" aria-hidden="true" />
-            <span className="text-evolyx-gold text-xs font-semibold tracking-[0.25em] uppercase">
+    <Reveal as="section" immediate className="relative overflow-hidden pb-20 pt-28 sm:pt-32">
+      <div className="grid-faint absolute inset-0" aria-hidden="true" />
+      <div
+        className="glow-gold absolute left-1/2 top-0 h-[620px] w-[1100px] max-w-[150vw] -translate-x-1/2 -translate-y-1/3"
+        aria-hidden="true"
+      />
+
+      <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
+        <div className="mx-auto max-w-3xl text-center">
+          {/* L'emblème EVOLYX ouvre la page : c'est la marque du groupe,
+              elle ne se réduit pas à une vignette dans un coin de l'en-tête. */}
+          <div className="r-rise mb-7 flex justify-center">
+            <span className="relative inline-flex items-center justify-center">
+              <span className="glow-gold absolute inset-[-90%] rounded-full" aria-hidden="true" />
+              <LogoMark size={88} priority className="relative" />
+            </span>
+          </div>
+
+          <div className="r-rise mb-6 flex justify-center" style={{ '--d': '60ms' }}>
+            <span className="chip">
+              <span className="h-1.5 w-1.5 rounded-full bg-gold" aria-hidden="true" />
               {t('hero.eyebrow')}
             </span>
           </div>
 
-          <h1 className="font-display font-bold text-white leading-[1.04] text-[42px] sm:text-[54px] lg:text-[72px] tracking-tight">
-            {t('hero.title_1')}{' '}
-            <span className="italic font-semibold text-evolyx-gold">
-              {t('hero.title_highlight')}
-            </span>
-          </h1>
+          <Headline
+            as="h1"
+            lines={t('hero.title_lines', { returnObjects: true })}
+            start={140}
+            stagger={90}
+            className="display text-[clamp(2.25rem,5.6vw,4rem)] text-on-surface"
+          />
 
-          <p className="mt-6 text-lg text-white/80 leading-relaxed max-w-lg">
+          <p
+            className="r-rise body-lg mx-auto mt-6 max-w-[54ch] text-on-variant"
+            style={{ '--d': '400ms' }}
+          >
             {t('hero.subtitle')}
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 mt-10">
-            <Link
-              to="/contact"
-              className="bg-evolyx-gold text-evolyx-black-deep font-semibold px-8 py-4 min-h-11 rounded-sm hover:bg-evolyx-gold-light transition-colors inline-flex items-center justify-center gap-2"
-            >
-              {t('hero.cta_primary')} <FaArrowRight className="text-sm" aria-hidden="true" />
+          <div
+            className="r-rise mt-9 flex flex-col justify-center gap-3 sm:flex-row"
+            style={{ '--d': '470ms' }}
+          >
+            <Link to="/contact" className="btn btn-gold group">
+              {t('hero.cta_primary')}
+              <FiArrowRight className="arrow-slide" aria-hidden="true" />
             </Link>
-            <Link
-              to="/portfolio"
-              className="border border-white/25 text-white font-medium px-8 py-4 min-h-11 rounded-sm hover:border-evolyx-gold hover:text-evolyx-gold transition-colors inline-flex items-center justify-center"
+            <a
+              href={contact.whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-outline"
             >
-              {t('hero.cta_secondary')}
-            </Link>
+              <FaWhatsapp className="text-[17px] text-gold-text" aria-hidden="true" />
+              {t('cta_final.whatsapp')}
+            </a>
           </div>
 
-          <div className="flex flex-wrap gap-11 mt-16 pt-8 border-t border-white/10">
+          <dl
+            className="r-rise mx-auto mt-12 grid max-w-2xl grid-cols-3 gap-4 border-t border-outline pt-8"
+            style={{ '--d': '540ms' }}
+          >
             {stats.map((stat) => (
               <div key={stat.label}>
-                <div className="font-display text-3xl font-bold text-evolyx-gold">{stat.value}</div>
-                <div className="text-xs text-white/70 mt-1 tracking-wide">{stat.label}</div>
+                <dt className="sr-only">{stat.label}</dt>
+                <dd>
+                  <span className="block text-xl font-bold tracking-tight text-on-surface sm:text-2xl">
+                    {stat.value}
+                  </span>
+                  <span className="mt-1 block text-xs leading-snug text-on-muted sm:text-[13px]">
+                    {stat.label}
+                  </span>
+                </dd>
               </div>
             ))}
-          </div>
+          </dl>
         </div>
 
-        <div className="relative hidden lg:flex items-center justify-center h-[520px]">
-          <div className="absolute w-[480px] h-[480px] rounded-full bg-evolyx-gold/10 blur-3xl" aria-hidden="true" />
-          <HexFacet size={380} className="relative z-[2]" />
-        </div>
+        {showcase && (
+          <div className="r-veil mx-auto mt-16 max-w-5xl" style={{ '--d': '620ms' }}>
+            <Link to={`/portfolio/${showcase.slug}`} className="group block">
+              <BrowserFrame label={showcase.url ? hostname(showcase.url) : showcase.title}>
+                <ProjectCover
+                  title={`${showcase.title} — ${showcase.subtitle[lang]}`}
+                  image={showcase.image}
+                  className="aspect-[16/9]"
+                  priority
+                />
+              </BrowserFrame>
+            </Link>
+          </div>
+        )}
       </div>
-    </section>
+    </Reveal>
   );
 }

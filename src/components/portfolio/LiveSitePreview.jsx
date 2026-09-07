@@ -1,32 +1,46 @@
 import { useTranslation } from 'react-i18next';
-import { FaExternalLinkAlt } from 'react-icons/fa';
+import { FiExternalLink } from 'react-icons/fi';
+import BrowserFrame from '../ui/BrowserFrame';
+import ProjectCover from './ProjectCover';
 
-export default function LiveSitePreview({ url, title }) {
+function hostname(url) {
+  try {
+    return new URL(url).hostname.replace(/^www\./, '');
+  } catch {
+    return url;
+  }
+}
+
+/**
+ * Aperçu d'un projet en ligne : la capture d'écran dans un châssis de
+ * navigateur, doublée d'un lien vers le site réel.
+ *
+ * On n'embarque plus le site distant en <iframe> : la plupart le refusent
+ * (X-Frame-Options), et quand ça passe on télécharge un site entier pour une
+ * vignette — l'inverse de ce que promet EVOLYX sur les connexions limitées.
+ */
+export default function LiveSitePreview({ url, title, image }) {
   const { t } = useTranslation();
 
   return (
-    <div className="mb-10">
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
-        <p className="text-sm text-evolyx-gray">{t('portfolio.preview_note')}</p>
+    <figure className="group">
+      <BrowserFrame label={hostname(url)}>
+        <a href={url} target="_blank" rel="noopener noreferrer" className="block">
+          <ProjectCover title={title} image={image} className="aspect-[16/9]" priority />
+        </a>
+      </BrowserFrame>
+
+      <figcaption className="mt-4">
         <a
           href={url}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center justify-center gap-2 min-h-11 bg-evolyx-gold text-evolyx-black-deep font-semibold px-5 py-2 rounded-sm hover:bg-evolyx-gold-light transition-colors shrink-0"
+          className="btn btn-outline"
         >
-          {t('portfolio.open_site')} <FaExternalLinkAlt className="text-xs" aria-hidden="true" />
+          {t('portfolio.open_site')}
+          <FiExternalLink aria-hidden="true" />
         </a>
-      </div>
-
-      <div className="hidden md:block border border-evolyx-black/15 rounded-sm overflow-hidden bg-evolyx-black-deep">
-        <iframe
-          src={url}
-          title={title}
-          loading="lazy"
-          referrerPolicy="no-referrer"
-          className="w-full h-[560px] bg-white"
-        />
-      </div>
-    </div>
+      </figcaption>
+    </figure>
   );
 }

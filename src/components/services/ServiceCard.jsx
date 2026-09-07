@@ -1,29 +1,64 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import {
+  FiGlobe,
+  FiSmartphone,
+  FiDatabase,
+  FiCpu,
+  FiRefreshCw,
+  FiTool,
+  FiArrowUpRight,
+} from 'react-icons/fi';
 
-export default function ServiceCard({ service, index }) {
+const ICONS = {
+  FaGlobe: FiGlobe,
+  FaMobileAlt: FiSmartphone,
+  FaDatabase: FiDatabase,
+  FaRobot: FiCpu,
+  FaSyncAlt: FiRefreshCw,
+  FaTools: FiTool,
+};
+
+export default function ServiceCard({ service, delay = 0, showItems = false }) {
   const { i18n } = useTranslation();
   const lang = i18n.language.startsWith('en') ? 'en' : 'fr';
+  const Icon = ICONS[service.icon] || FiGlobe;
 
   return (
     <Link
       to={`/services#${service.id}`}
-      className="group relative bg-white p-10 min-h-[220px] transition-colors duration-300 [@media(hover:hover)]:hover:bg-evolyx-black-deep overflow-hidden block"
+      className="card card-hover r-rise group flex h-full flex-col p-6"
+      style={{ '--d': `${delay}ms` }}
     >
       <span
-        className="absolute left-0 top-0 bottom-0 w-[3px] bg-evolyx-gold scale-y-0 origin-bottom transition-transform duration-300 group-hover:scale-y-100"
+        className="inline-flex h-11 w-11 items-center justify-center rounded-md bg-gold/12 text-[19px] text-gold-text"
         aria-hidden="true"
-      />
+      >
+        <Icon />
+      </span>
 
-      <div className="font-display text-sm font-bold text-evolyx-gold-dark/80 tracking-wide [@media(hover:hover)]:group-hover:text-evolyx-gold transition-colors">
-        {String(index + 1).padStart(2, '0')}
-      </div>
-      <h3 className="font-display text-xl font-bold text-evolyx-black mt-4 mb-3 [@media(hover:hover)]:group-hover:text-white transition-colors">
+      <h3 className="mt-5 flex items-start gap-2 text-[17px] font-semibold text-on-surface">
         {service.title[lang]}
+        <FiArrowUpRight
+          className="arrow-slide mt-0.5 shrink-0 text-on-muted transition-colors group-hover:text-gold-text"
+          aria-hidden="true"
+        />
       </h3>
-      <p className="text-sm text-evolyx-gray leading-relaxed [@media(hover:hover)]:group-hover:text-white/70 transition-colors">
-        {service.summary[lang]}
-      </p>
+
+      <p className="mt-2 text-sm leading-relaxed text-on-variant">{service.summary[lang]}</p>
+
+      {showItems && (
+        <ul className="mt-auto flex flex-wrap gap-1.5 border-t border-outline pt-4 mt-5">
+          {service.items[lang].map((item) => (
+            <li
+              key={item}
+              className="rounded-full bg-surface-container px-2.5 py-1 text-xs font-medium text-on-variant"
+            >
+              {item}
+            </li>
+          ))}
+        </ul>
+      )}
     </Link>
   );
 }

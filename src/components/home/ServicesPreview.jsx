@@ -1,38 +1,45 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { FaArrowRight } from 'react-icons/fa';
+import { FiArrowRight } from 'react-icons/fi';
 import { services } from '../../data/services';
 import ServiceCard from '../services/ServiceCard';
+import Reveal from '../ui/Reveal';
+import Headline from '../ui/Headline';
+import SectionLabel from '../ui/SectionLabel';
 
 export default function ServicesPreview() {
   const { t } = useTranslation();
-  const featured = services.slice(0, 3);
 
   return (
-    <section className="pt-16 pb-24 px-6">
-      <div className="max-w-7xl mx-auto">
-        <div className="max-w-xl mb-14">
-          <p className="flex items-center gap-2.5 text-xs font-bold tracking-[0.2em] text-evolyx-gold-dark uppercase mb-4">
-            <span className="w-6 h-0.5 bg-evolyx-gold" /> {t('services.eyebrow')}
+    <section className="border-t border-outline bg-surface py-20 md:py-28">
+      <div className="mx-auto max-w-7xl px-5 lg:px-8">
+        <Reveal className="mb-12 max-w-2xl">
+          <SectionLabel className="mb-5">{t('services.eyebrow')}</SectionLabel>
+          <Headline
+            lines={t('services.title_lines', { returnObjects: true })}
+            start={80}
+            className="display text-[clamp(1.75rem,3.6vw,2.6rem)] text-on-surface"
+          />
+          <p className="r-rise body-lg mt-4 text-on-variant" style={{ '--d': '260ms' }}>
+            {t('services.subtitle')}
           </p>
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-evolyx-black leading-tight">
-            {t('services.title')}
-          </h2>
-          <p className="mt-4 text-evolyx-gray leading-relaxed">{t('services.subtitle')}</p>
-        </div>
+        </Reveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-[1px] bg-evolyx-black/[0.06] mb-12">
-          {featured.map((service, index) => (
-            <ServiceCard key={service.id} service={service} index={index} />
+        <Reveal className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {services.map((service, index) => (
+            <ServiceCard key={service.id} service={service} delay={index * 70} />
           ))}
-        </div>
+        </Reveal>
 
-        <Link
-          to="/services"
-          className="inline-flex items-center gap-2 text-evolyx-black font-medium hover:text-evolyx-gold transition-colors min-h-11"
-        >
-          {t('services.cta')} <FaArrowRight className="text-sm" />
-        </Link>
+        <Reveal className="mt-10">
+          <Link
+            to="/services"
+            className="link-line r-rise group text-[15px] font-semibold text-on-surface"
+          >
+            {t('services.cta')}
+            <FiArrowRight className="arrow-slide" aria-hidden="true" />
+          </Link>
+        </Reveal>
       </div>
     </section>
   );
