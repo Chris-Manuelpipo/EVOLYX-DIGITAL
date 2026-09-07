@@ -17,7 +17,13 @@ Beaucoup d'agences de développement au Cameroun se positionnent comme des exéc
 Quiconque reprend ce projet (humain ou agent IA) devrait respecter ces principes :
 
 1. **Le contenu prime sur la décoration.** Chaque section doit avoir une raison métier d'exister. Ne pas ajouter d'animations ou d'effets qui ne servent pas la compréhension.
-2. **La charte graphique est fixe, pas négociable.** Or `#D4AF37` / Noir `#1A1A1A` doivent rester la signature visuelle sur tous les supports EVOLYX (print et web), pour la cohérence de marque entre EVOLYX, EVOLYX Shop et EVOLYX Digital.
+2. **La charte graphique est fixe, pas négociable.** Or `#D4AF37` / Noir doivent rester la signature visuelle sur tous les supports EVOLYX (print et web), pour la cohérence de marque entre EVOLYX, EVOLYX Shop et EVOLYX Digital. `#1A1A1A` reste la référence print et le noir de l'emblème ; sur le web, les surfaces passent par les tokens (`on-surface` `#18181B` en clair, `surface-page` `#0E0E10` en sombre).
+
+   **Typographie —** police unique : **Inter**, 400 à 800. Le site vise le registre des produits SaaS professionnels (Render, Linear, Stripe) ; la distinction ne passe pas par une police originale mais par l'or, les formes et le mouvement.
+
+   **Emblème —** le cube isométrique or / blanc / noir (`public/logo.png`) est la marque du groupe. Il est affiché tel quel dans l'en-tête, le pied de page, le héros, le bloc d'appel à l'action et le favicon. Ne pas le réinterpréter ni le styliser.
+
+   **Thème —** le site existe en clair et en sombre, l'or est l'accent commun aux deux. Toute nouvelle couleur doit être ajoutée en paire dans `src/index.css`, jamais codée en dur dans un composant.
 3. **Le bilingue FR/EN n'est pas optionnel.** Toute nouvelle section de contenu doit être ajoutée dans les deux langues (`src/locales/fr` et `src/locales/en`, ou champs `{fr, en}` dans les données).
 4. **Le site doit rester léger.** Contexte camerounais = connexions mobiles parfois limitées. Éviter les dépendances lourdes, les images non optimisées, les animations coûteuses.
 5. **Les données de contenu sont séparées du code.** Services et projets vivent dans `src/data/` — ajouter un projet ne doit jamais nécessiter de toucher aux composants.

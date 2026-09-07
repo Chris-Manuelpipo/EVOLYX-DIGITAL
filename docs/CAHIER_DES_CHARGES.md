@@ -64,8 +64,7 @@ Ces éléments sont prévus dans l'architecture pour une V2, mais ne font pas pa
 | Noir | `#1A1A1A` |
 | Gris | `#6E6E6E` |
 | Fond clair | `#F7F6F3` |
-| Police titres | Playfair Display (serif) |
-| Police texte | Inter (sans-serif) |
+| Police | Inter (400 à 800), police unique |
 
 Charte identique à celle utilisée dans tous les documents PDF EVOLYX déjà produits (ordre du jour, catalogue de services, contrats).
 
