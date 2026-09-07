@@ -2,7 +2,8 @@
   "a11y": {
     "skip_to_content": "Aller au contenu",
     "open_menu": "Ouvrir le menu",
-    "close_menu": "Fermer le menu"
+    "close_menu": "Fermer le menu",
+    "language": "Langue"
   },
   "seo": {
     "default_title": "EVOLYX Digital — Logiciels métier, sites et applications",
@@ -30,31 +31,43 @@
     "cta": "Demander un devis"
   },
   "hero": {
-    "eyebrow": "Logiciel métier · Cameroun & international",
-    "title_1": "Des logiciels qui font tourner",
-    "title_highlight": "votre activité",
-    "subtitle": "EVOLYX Digital conçoit des sites, applications et outils métier qui tiennent la route — y compris avec une connexion instable.",
+    "eyebrow": "Temps réel · Hors-ligne · Yaoundé",
+    "title_lines": [
+      "Nous transformons vos idées",
+      "en produits numériques"
+    ],
+    "subtitle": "Sites, applications et outils métier conçus pour le terrain. Pour les entreprises camerounaises et internationales.",
     "cta_primary": "Demander un devis",
     "cta_secondary": "Voir nos projets",
-    "stat_1_value": "7",
-    "stat_1_label": "Projets livrés",
-    "stat_2_value": "Temps réel",
-    "stat_2_label": "Synchro, chat, statuts",
-    "stat_3_value": "Hors ligne",
-    "stat_3_label": "Pensé pour le terrain"
+    "stat_1_value": "+ 07",
+    "stat_1_label": "projets livrés",
+    "stat_2_value": "Équipe",
+    "stat_2_label": "de professionnels qualifiés",
+    "stat_3_value": "Adapté",
+    "stat_3_label": "à tous les métiers"
   },
   "services": {
     "eyebrow": "Ce que nous faisons",
-    "title": "Des outils pour vos opérations, pas des templates",
-    "subtitle": "Du site qui convertit au logiciel qui gère stock, dossiers ou caisse : nous couvrons le cycle de vie de votre projet.",
-    "cta": "Voir tous les services"
+    "title_lines": [
+      "Des outils pour vos opérations,",
+      "pas des templates."
+    ],
+    "subtitle": "Du site qui convertit au logiciel qui gère stock, dossiers ou caisse : nous couvrons le cycle de vie complet de votre projet, du cadrage à la maintenance.",
+    "cta": "Voir tous les services",
+    "cta_title": "Votre besoin n'entre dans aucune case ?",
+    "cta_text": "Décrivez-le. Nous vous dirons franchement si c'est dans nos cordes, et ce que ça implique."
   },
   "portfolio": {
     "eyebrow": "Notre travail",
-    "title": "Des projets, pas des promesses",
-    "subtitle": "Chaque solution répond à un vrai problème métier.",
+    "title_lines": [
+      "Des projets,",
+      "pas des promesses."
+    ],
+    "subtitle": "Chaque solution répond à un vrai problème métier. Contexte, contrainte, ce qui a été livré.",
     "cta": "Voir tout le portfolio",
+    "filter": "Filtrer",
     "view_project": "Voir le projet",
+    "next_project": "Projet suivant",
     "back_to_portfolio": "Retour au portfolio",
     "similar_project_cta": "Un problème similaire à résoudre ?",
     "context": "Contexte",
@@ -62,12 +75,14 @@
     "highlight": "Ce qui distingue ce projet",
     "stack": "Stack technique",
     "live": "Live",
-    "open_site": "Ouvrir le site",
-    "preview_note": "L'aperçu intégré peut être bloqué par le site. Utilisez le bouton pour l'ouvrir dans un nouvel onglet."
+    "open_site": "Ouvrir le site"
   },
   "why": {
     "eyebrow": "Pourquoi EVOLYX Digital",
-    "title": "On construit pour le terrain, pas pour la démo",
+    "title_lines": [
+      "On construit pour le terrain,",
+      "pas pour la démo."
+    ],
     "point_1_title": "Temps réel, même réseau instable",
     "point_1_text": "Messagerie, statuts, synchronisation : Talky tient quand la connexion coupe et revient.",
     "point_2_title": "Conçu pour le hors-ligne",
@@ -77,7 +92,11 @@
   },
   "process": {
     "eyebrow": "Comment ça marche",
-    "title": "De la première discussion à la maintenance",
+    "title_lines": [
+      "De la première discussion",
+      "à la maintenance."
+    ],
+    "subtitle": "Cinq étapes, un seul interlocuteur. À chaque moment vous savez où en est votre projet et ce qu'il reste à faire.",
     "step_1": "Prise de contact",
     "step_1_text": "WhatsApp, email ou formulaire. On clarifie le problème métier.",
     "step_2": "Devis & cadrage",
@@ -90,14 +109,28 @@
     "step_5_text": "Correctifs, évolutions, hébergement si vous le souhaitez."
   },
   "cta_final": {
-    "title": "Vous avez un processus à digitaliser ?",
+    "eyebrow": "Prochaine étape",
+    "title_lines": [
+      "Vous avez un processus",
+      "à digitaliser ?"
+    ],
     "subtitle": "Décrivez le problème. Nous vous disons si on peut le résoudre, et comment.",
-    "button": "Demander un devis"
+    "button": "Demander un devis",
+    "whatsapp": "Écrire sur WhatsApp"
   },
   "contact": {
     "eyebrow": "Contact",
-    "title": "Parlons de votre projet",
-    "subtitle": "Décrivez-nous votre besoin, nous revenons vers vous sous 24h ouvrées.",
+    "title_lines": [
+      "Parlons de",
+      "votre projet."
+    ],
+    "subtitle": "Décrivez-nous votre besoin. Plus vous êtes précis, plus notre réponse le sera.",
+    "direct": "Contact direct",
+    "form_label": "Ou remplissez le formulaire",
+    "channel_whatsapp": "WhatsApp — réponse la plus rapide",
+    "channel_email": "Email",
+    "sla_label": "Délai de réponse",
+    "sla_text": "Nous répondons sous 24 heures ouvrées. Si votre besoin est urgent, passez directement par WhatsApp.",
     "form": {
       "name": "Nom complet",
       "company": "Entreprise (optionnel)",
@@ -134,21 +167,40 @@
         "high": "1 500 000 – 4 000 000 FCFA",
         "enterprise": "> 4 000 000 FCFA",
         "tbd": "À définir"
-      }
+      },
+      "submit_whatsapp": "Envoyer sur WhatsApp",
+      "whatsapp_hint": "WhatsApp ouvre une conversation avec votre demande déjà rédigée — vous n'avez plus qu'à appuyer sur envoyer.",
+      "whatsapp_opened": "WhatsApp s'est ouvert avec votre demande. Si rien ne s'est passé, vérifiez que votre navigateur n'a pas bloqué la fenêtre.",
+      "email_note": "(requis pour l’envoi par email)",
+      "email_required_hint": "Renseignez votre email pour activer l’envoi par email. Sans email, passez par WhatsApp : la conversation nous identifie déjà."
     },
-    "direct": "Ou contactez-nous directement"
+    "whatsapp_message": {
+      "title": "Nouvelle demande — EVOLYX Digital",
+      "name": "Nom",
+      "company": "Entreprise",
+      "email": "Email",
+      "phone": "Téléphone",
+      "project_type": "Type de projet",
+      "budget": "Budget indicatif",
+      "need": "Besoin",
+      "truncated": "(message tronqué — la suite par email)",
+      "footer": "Envoyé depuis le site EVOLYX Digital"
+    }
   },
   "footer": {
-    "tagline": "Des logiciels qui font tourner votre activité.",
-    "quick_links": "Liens rapides",
+    "tagline": "Des logiciels qui font tourner votre activité, y compris quand le réseau ne suit pas.",
+    "quick_links": "Navigation",
     "group": "Groupe EVOLYX",
     "contact": "Contact",
     "legal": "Mentions légales",
     "rights": "Tous droits réservés."
   },
   "about_page": {
-    "title": "À propos d'EVOLYX Digital",
-    "intro": "EVOLYX Digital est la branche développement logiciel du groupe EVOLYX. Nous concevons des sites, applications et logiciels métier pour des entreprises camerounaises, africaines francophones, et des clients internationaux.",
+    "title_lines": [
+      "La branche logiciel",
+      "du groupe EVOLYX."
+    ],
+    "intro": "EVOLYX Digital conçoit des sites, applications et logiciels métier pour des entreprises camerounaises, africaines francophones, et des clients internationaux.",
     "group_title": "Une branche, un rôle clair",
     "group_text": "Le groupe EVOLYX couvre plusieurs activités. EVOLYX Shop est le e-commerce. EVOLYX Digital construit le logiciel : vitrines, applications, back-offices, outils métier. Ce site n'est pas une boutique.",
     "approach_title": "On part du problème, pas du template",
@@ -161,8 +213,16 @@
     "value_3_title": "Bilingue, sans option",
     "value_3_text": "Français et anglais sur le site, et dans la livraison, pour travailler avec des équipes locales et internationales."
   },
+  "not_found": {
+    "text": "Le lien est peut-être obsolète, ou l'adresse contient une faute de frappe. Le reste du site fonctionne normalement.",
+    "cta_home": "Retour à l'accueil",
+    "cta_portfolio": "Voir nos projets",
+    "title": "Cette page n'existe pas."
+  },
   "legal_page": {
-    "title": "Mentions légales",
+    "title_lines": [
+      "Mentions légales"
+    ],
     "pending": "À renseigner",
     "publisher": "Éditeur",
     "company": "Dénomination",
@@ -174,5 +234,21 @@
     "director": "Directeur de publication",
     "host": "Hébergement",
     "contact": "Contact"
+  },
+  "theme": {
+    "label": "Thème",
+    "system": "Thème système",
+    "light": "Thème clair",
+    "dark": "Thème sombre"
+  },
+  "testimonials": {
+    "eyebrow": "Ce qu'ils en disent",
+    "title_lines": [
+      "Ce sont nos clients",
+      "qui en parlent le mieux."
+    ],
+    "subtitle": "Des projets livrés, utilisés au quotidien, et des équipes qui acceptent de le dire.",
+    "related": "Projet : {{title}}",
+    "on_project": "Le mot du client"
   }
 }

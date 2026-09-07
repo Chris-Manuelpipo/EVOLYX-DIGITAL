@@ -2,24 +2,25 @@
   "a11y": {
     "skip_to_content": "Skip to content",
     "open_menu": "Open menu",
-    "close_menu": "Close menu"
+    "close_menu": "Close menu",
+    "language": "Language"
   },
   "seo": {
-    "default_title": "EVOLYX Digital — Business software, websites and apps",
-    "default_description": "EVOLYX Digital builds websites, apps and business software for Cameroonian and international companies — including on unstable connections.",
-    "home_title": "EVOLYX Digital — Software that runs your operations",
-    "home_description": "Websites, apps and business tools built for real-world conditions. Cameroon and international.",
+    "default_title": "EVOLYX Digital — Business software, websites and applications",
+    "default_description": "EVOLYX Digital builds websites, applications and business software for Cameroonian and international companies — including on unstable connections.",
+    "home_title": "EVOLYX Digital — Software that keeps your business running",
+    "home_description": "Websites, applications and business tools built for the field. Cameroon and international.",
     "services_title": "Services — EVOLYX Digital",
-    "services_description": "Web platforms, mobile apps, business software, automation, existing-app evolution and maintenance.",
+    "services_description": "Websites and web platforms, mobile apps, business software, automation, legacy evolution and maintenance.",
     "portfolio_title": "Portfolio — EVOLYX Digital",
-    "portfolio_description": "Shipped work: real-time messaging, inventory, social-security operations, CMS websites.",
-    "project_title": "{{title}} — EVOLYX Digital portfolio",
+    "portfolio_description": "Delivered projects: real-time messaging, inventory management, social security, CMS-backed websites.",
+    "project_title": "{{title}} — EVOLYX Digital Portfolio",
     "about_title": "About — EVOLYX Digital",
-    "about_description": "EVOLYX Digital is the software branch of the EVOLYX group. We digitize operations, not mockups.",
+    "about_description": "EVOLYX Digital is the software arm of the EVOLYX group. We digitize operations, not mockups.",
     "contact_title": "Request a quote — EVOLYX Digital",
-    "contact_description": "Tell us what you need. We reply within 24 business hours by email or WhatsApp.",
+    "contact_description": "Describe your need. Reply within 24 business hours by email or WhatsApp.",
     "legal_title": "Legal notice — EVOLYX Digital",
-    "legal_description": "Legal notice for EVOLYX Digital, software development branch of the EVOLYX group."
+    "legal_description": "Legal notice for EVOLYX Digital, the software development arm of the EVOLYX group."
   },
   "nav": {
     "home": "Home",
@@ -30,74 +31,106 @@
     "cta": "Request a quote"
   },
   "hero": {
-    "eyebrow": "Business software · Cameroon & international",
-    "title_1": "Software that keeps",
-    "title_highlight": "your operations running",
-    "subtitle": "EVOLYX Digital builds websites, apps and business tools that hold up in the real world — including on an unstable connection.",
+    "eyebrow": "Real-time · Offline-first · Yaoundé",
+    "title_lines": [
+      "We turn your ideas",
+      "into digital products"
+    ],
+    "subtitle": "Websites, applications and business tools built for the field. For Cameroonian and international companies.",
     "cta_primary": "Request a quote",
     "cta_secondary": "See our work",
-    "stat_1_value": "7",
-    "stat_1_label": "Shipped projects",
-    "stat_2_value": "Real-time",
-    "stat_2_label": "Sync, chat, status",
-    "stat_3_value": "Offline",
-    "stat_3_label": "Built for the field"
+    "stat_1_value": "+ 07",
+    "stat_1_label": "projects delivered",
+    "stat_2_value": "Team",
+    "stat_2_label": "of qualified professionals",
+    "stat_3_value": "Built",
+    "stat_3_label": "for every trade"
   },
   "services": {
     "eyebrow": "What we do",
-    "title": "Tools for your operations, not templates",
-    "subtitle": "From a site that converts to software that runs inventory, records or checkout: we cover the full project lifecycle.",
-    "cta": "View all services"
+    "title_lines": [
+      "Tools for your operations,",
+      "not templates."
+    ],
+    "subtitle": "From the site that converts to the software that runs inventory, records or the till: we cover the full life cycle of your project, from scoping to maintenance.",
+    "cta": "See all services",
+    "cta_title": "Your need doesn't fit any box?",
+    "cta_text": "Describe it. We'll tell you honestly whether it's within our reach, and what it would involve."
   },
   "portfolio": {
     "eyebrow": "Our work",
-    "title": "Projects, not promises",
-    "subtitle": "Every solution answers a real business problem.",
-    "cta": "View full portfolio",
+    "title_lines": [
+      "Projects,",
+      "not promises."
+    ],
+    "subtitle": "Every solution answers a real business problem. Context, constraint, what was delivered.",
+    "cta": "See the full portfolio",
+    "filter": "Filter",
     "view_project": "View project",
+    "next_project": "Next project",
     "back_to_portfolio": "Back to portfolio",
-    "similar_project_cta": "Have a similar problem to solve?",
+    "similar_project_cta": "Got a similar problem to solve?",
     "context": "Context",
     "solution": "Solution delivered",
-    "highlight": "What makes this project stand out",
+    "highlight": "What sets this project apart",
     "stack": "Tech stack",
     "live": "Live",
-    "open_site": "Open site",
-    "preview_note": "The embedded preview may be blocked by the site. Use the button to open it in a new tab."
+    "open_site": "Open site"
   },
   "why": {
     "eyebrow": "Why EVOLYX Digital",
-    "title": "Built for the field, not the demo",
+    "title_lines": [
+      "We build for the field,",
+      "not for the demo."
+    ],
     "point_1_title": "Real-time, even on an unstable network",
-    "point_1_text": "Messaging, status, sync: Talky holds up when the connection drops and comes back.",
-    "point_2_title": "Designed to work offline",
-    "point_2_text": "Checkout, inventory, accounting: tools that stay usable without permanent internet.",
-    "point_3_title": "Sensitive operations, structured data",
+    "point_1_text": "Messaging, statuses, synchronization: Talky holds up when the connection drops and comes back.",
+    "point_2_title": "Designed for offline",
+    "point_2_text": "Till, inventory, accounting: tools that stay usable without permanent internet.",
+    "point_3_title": "Sensitive domains, structured data",
     "point_3_text": "Records, contributions, benefits: rigorous modeling, not a dressed-up spreadsheet."
   },
   "process": {
     "eyebrow": "How it works",
-    "title": "From first conversation to ongoing support",
-    "step_1": "Initial contact",
+    "title_lines": [
+      "From the first conversation",
+      "to maintenance."
+    ],
+    "subtitle": "Five steps, one point of contact. At every moment you know where your project stands and what is left to do.",
+    "step_1": "First contact",
     "step_1_text": "WhatsApp, email or the form. We clarify the business problem.",
     "step_2": "Quote & scoping",
     "step_2_text": "Scope, timeline and budget in writing, before the first line of code.",
     "step_3": "Development",
-    "step_3_text": "Visible iterations. You see progress, you approve.",
+    "step_3_text": "Visible iterations. You see progress, you approve it.",
     "step_4": "Delivery",
-    "step_4_text": "Go-live, training, documentation that is actually useful.",
+    "step_4_text": "Go live, training, documentation that is actually useful.",
     "step_5": "Maintenance",
-    "step_5_text": "Fixes, evolution, hosting if you want it."
+    "step_5_text": "Fixes, improvements, hosting if you want it."
   },
   "cta_final": {
-    "title": "Have an operation to digitize?",
-    "subtitle": "Describe the problem. We will tell you if we can solve it, and how.",
-    "button": "Request a quote"
+    "eyebrow": "Next step",
+    "title_lines": [
+      "Got a process",
+      "to digitize?"
+    ],
+    "subtitle": "Describe the problem. We'll tell you whether we can solve it, and how.",
+    "button": "Request a quote",
+    "whatsapp": "Message on WhatsApp"
   },
   "contact": {
     "eyebrow": "Contact",
-    "title": "Let's talk about your project",
-    "subtitle": "Tell us what you need. We get back to you within 24 business hours.",
+    "title_lines": [
+      "Let's talk about",
+      "your project."
+    ],
+    "subtitle": "Tell us what you need. The more specific you are, the more specific our answer will be.",
+    "direct": "Direct contact",
+    "form_label": "Or fill in the form",
+    "channel_whatsapp": "WhatsApp — fastest reply",
+    "channel_email": "Email",
+    "sla_label": "Response time",
+    "sla_text": "We reply within 24 business hours. If your need is urgent, go straight to WhatsApp.",
     "form": {
       "name": "Full name",
       "company": "Company (optional)",
@@ -105,74 +138,117 @@
       "phone": "Phone (optional)",
       "project_type": "Project type",
       "project_type_placeholder": "Select a project type",
-      "budget": "Estimated budget",
+      "budget": "Indicative budget",
       "budget_placeholder": "Select a range",
-      "message": "Describe your needs",
+      "message": "Describe your need",
       "submit": "Send request",
       "sending": "Sending...",
-      "success": "Thank you. Your message was sent — we will get back to you shortly.",
-      "error": "Sending failed. Try again, or reach us by email or WhatsApp.",
-      "not_configured": "The form is not connected yet. Email us at {{email}} or message us on WhatsApp.",
+      "success": "Thank you. Your message was sent, we'll get back to you shortly.",
+      "error": "Sending failed. Please try again, or reach us by email or WhatsApp.",
+      "not_configured": "The form is not connected yet. Write to us at {{email}} or on WhatsApp.",
       "errors": {
-        "name": "Please enter your name (at least 2 characters).",
+        "name": "Please enter your name (2 characters minimum).",
         "email": "Please enter a valid email.",
         "project_type": "Please select a project type.",
         "budget": "Please select a budget range.",
-        "message": "Please describe your needs (at least 10 characters)."
+        "message": "Please describe your need (10 characters minimum)."
       },
       "types": {
         "web": "Website",
-        "mobile": "Mobile app",
+        "mobile": "Mobile application",
         "business": "Business platform",
         "automation": "Automation / AI",
-        "evolution": "Existing-app evolution",
+        "evolution": "Existing app evolution",
         "other": "Other"
       },
       "budgets": {
-        "under_500": "< 500,000 XAF",
-        "mid": "500,000 – 1,500,000 XAF",
-        "high": "1,500,000 – 4,000,000 XAF",
-        "enterprise": "> 4,000,000 XAF",
+        "under_500": "< 500,000 FCFA",
+        "mid": "500,000 – 1,500,000 FCFA",
+        "high": "1,500,000 – 4,000,000 FCFA",
+        "enterprise": "> 4,000,000 FCFA",
         "tbd": "To be defined"
-      }
+      },
+      "submit_whatsapp": "Send on WhatsApp",
+      "whatsapp_hint": "WhatsApp opens a conversation with your request already written — you just press send.",
+      "whatsapp_opened": "WhatsApp opened with your request. If nothing happened, check that your browser did not block the window.",
+      "email_note": "(required to send by email)",
+      "email_required_hint": "Enter your email to enable sending by email. Without one, use WhatsApp — the conversation already identifies you."
     },
-    "direct": "Or reach us directly"
+    "whatsapp_message": {
+      "title": "New request — EVOLYX Digital",
+      "name": "Name",
+      "company": "Company",
+      "email": "Email",
+      "phone": "Phone",
+      "project_type": "Project type",
+      "budget": "Indicative budget",
+      "need": "Need",
+      "truncated": "(message truncated — the rest by email)",
+      "footer": "Sent from the EVOLYX Digital website"
+    }
   },
   "footer": {
-    "tagline": "Software that keeps your operations running.",
-    "quick_links": "Quick links",
+    "tagline": "Software that keeps your business running, including when the network doesn't keep up.",
+    "quick_links": "Navigation",
     "group": "EVOLYX Group",
     "contact": "Contact",
     "legal": "Legal notice",
     "rights": "All rights reserved."
   },
   "about_page": {
-    "title": "About EVOLYX Digital",
-    "intro": "EVOLYX Digital is the software development branch of the EVOLYX group. We design websites, apps and business software for Cameroonian companies, Francophone Africa, and international clients.",
-    "group_title": "One group, a clear role",
-    "group_text": "The EVOLYX group covers several activities. EVOLYX Shop is e-commerce. EVOLYX Digital builds the software: showcase sites, apps, back-offices, business tools. This site is not a store.",
-    "approach_title": "We start from the problem, not a template",
-    "approach_text": "Many agencies sell generic websites. We start from a concrete operation — inventory, records, checkout, messaging — and we ship the tool that runs it, including when the network is unstable.",
+    "title_lines": [
+      "The software arm",
+      "of the EVOLYX group."
+    ],
+    "intro": "EVOLYX Digital builds websites, applications and business software for Cameroonian companies, French-speaking African businesses, and international clients.",
+    "group_title": "One branch, one clear role",
+    "group_text": "The EVOLYX group covers several activities. EVOLYX Shop is the e-commerce arm. EVOLYX Digital builds the software: websites, applications, back-offices, business tools. This site is not a shop.",
+    "approach_title": "We start from the problem, not the template",
+    "approach_text": "Many agencies sell generic websites. We start from a concrete operation — inventory, records, till, messages — and deliver the tool that runs it, including when the network is unstable.",
     "values_title": "What we commit to",
     "value_1_title": "Proof, not slides",
     "value_1_text": "The portfolio shows products in use, not mockups. If a project is still in progress, we say so.",
-    "value_2_title": "One point of contact, end to end",
-    "value_2_text": "Scoping, build, delivery, maintenance: you are not handed off from a salesperson to an anonymous freelancer.",
+    "value_2_title": "One contact, end to end",
+    "value_2_text": "Scoping, development, delivery, maintenance: you are not passed from a salesperson to an anonymous freelancer.",
     "value_3_title": "Bilingual, not optional",
-    "value_3_text": "French and English on the site, and in delivery, so we can work with local and international teams."
+    "value_3_text": "French and English on the site, and in delivery, to work with both local and international teams."
+  },
+  "not_found": {
+    "text": "The link may be outdated, or the address contains a typo. The rest of the site works fine.",
+    "cta_home": "Back to home",
+    "cta_portfolio": "See our work",
+    "title": "This page does not exist."
   },
   "legal_page": {
-    "title": "Legal notice",
+    "title_lines": [
+      "Legal notice"
+    ],
     "pending": "To be completed",
     "publisher": "Publisher",
-    "company": "Name",
+    "company": "Company name",
     "parent": "Group",
     "legal_form": "Legal form",
-    "rccm": "RCCM no.",
-    "niu": "NIU no.",
+    "rccm": "RCCM No.",
+    "niu": "NIU No.",
     "address": "Registered office",
     "director": "Publication director",
     "host": "Hosting",
     "contact": "Contact"
+  },
+  "theme": {
+    "label": "Theme",
+    "system": "System theme",
+    "light": "Light theme",
+    "dark": "Dark theme"
+  },
+  "testimonials": {
+    "eyebrow": "What they say",
+    "title_lines": [
+      "Our clients say it",
+      "better than we do."
+    ],
+    "subtitle": "Projects delivered, used every day, by teams willing to say so.",
+    "related": "Project: {{title}}",
+    "on_project": "From the client"
   }
 }
