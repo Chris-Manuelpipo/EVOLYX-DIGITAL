@@ -1,6 +1,11 @@
 // Données du portfolio EVOLYX Digital
-// image : chemin public optionnel, ex. '/portfolio/talky.webp' (déposer le fichier dans public/portfolio/)
-// url : preview live si le site est public
+//
+// image : capture d'écran du projet. Déposer le fichier dans public/portfolio/
+//         au format 1600x1000 (16:10), de préférence en .webp, puis renseigner
+//         le chemin ici — ex. '/portfolio/talky.webp'.
+//         Sans image, la carte affiche une surface neutre avec l'emblème :
+//         c'est visiblement un emplacement en attente.
+// url   : URL publique du projet, s'il est en ligne.
 
 export const projects = [
   {
@@ -29,7 +34,7 @@ export const projects = [
     title: 'OpenScience Hub',
     subtitle: { fr: 'Répertoire académique ouvert', en: 'Open academic repository' },
     stack: ['FastAPI', 'PostgreSQL', 'React', 'Vite'],
-    featured: true,
+    featured: false,
     context: {
       fr: "Les universités camerounaises manquent d'un espace centralisé pour partager et retrouver les travaux académiques produits localement.",
       en: 'Cameroonian universities lack a centralized space to share and find locally produced academic work.',
@@ -49,7 +54,7 @@ export const projects = [
     title: 'Stock Manager',
     subtitle: { fr: 'Plateforme de gestion de stock', en: 'Inventory management platform' },
     stack: ['React', 'TypeScript', 'Tailwind CSS', 'Zustand'],
-    featured: true,
+    featured: false,
     context: {
       fr: "Les PME qui gèrent des stocks physiques ont besoin d'un outil clair pour suivre entrées, sorties, alertes et mouvements, sans complexité inutile.",
       en: 'SMEs managing physical inventory need a clear tool to track stock in/out, alert levels and movements without unnecessary complexity.',
@@ -89,8 +94,9 @@ export const projects = [
     title: 'JK IT Solutions',
     subtitle: { fr: 'Site vitrine avec CMS', en: 'Showcase website with CMS' },
     stack: ['CMS', 'Vercel'],
-    featured: false,
+    featured: true,
     url: 'https://jk-it-solutions.vercel.app/',
+    image: '/portfolio/jk-it-solutions.webp',
     context: {
       fr: "Une entreprise IT avait besoin d'un site vitrine professionnel, et de la liberté de mettre à jour son contenu sans développeur à chaque changement.",
       en: 'An IT company needed a professional showcase website, and the freedom to update content without a developer for every change.',
@@ -110,8 +116,9 @@ export const projects = [
     title: 'OSS',
     subtitle: { fr: "Gestion d'un organisme de sécurité sociale", en: 'Social security organization management' },
     stack: ['JavaFX', 'PostgreSQL', 'React'],
-    featured: false,
+    featured: true,
     url: 'https://gestion-ss-app.vercel.app/',
+    image: '/portfolio/oss-gestion.webp',
     context: {
       fr: "Les organismes de sécurité sociale gèrent des volumes importants de dossiers d'assurés, de cotisations et de prestations : il faut un système fiable et structuré.",
       en: 'Social security organizations manage large volumes of member records, contributions and benefits, and need a reliable, structured system.',
