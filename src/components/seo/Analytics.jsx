@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
-const GA_ID = import.meta.env.VITE_GA_MEASUREMENT_ID || 'G-EGL44RC3WS';
+const GA_ID = import.meta.env.VITE_GA_MEASUREMENT_ID || 'G-XGF4RPVJHR';
 
 function isLiveHost() {
   const host = window.location.hostname;
