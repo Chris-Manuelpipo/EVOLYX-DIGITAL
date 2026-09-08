@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 import Seo from './components/seo/Seo';
+import Analytics from './components/seo/Analytics';
 
 const Home = lazy(() => import('./pages/Home'));
 const Services = lazy(() => import('./pages/Services'));
@@ -44,6 +45,7 @@ function AppShell() {
         {t('a11y.skip_to_content')}
       </a>
       <Seo />
+      <Analytics />
       <ScrollToTop />
       <Header />
       <main id="main-content" tabIndex={-1}>
