@@ -135,7 +135,7 @@ export default function Footer() {
           className="r-fade pointer-events-none mt-16 select-none overflow-hidden"
           aria-hidden="true"
         >
-          <span className="block whitespace-nowrap text-[clamp(2.25rem,11.5vw,8.75rem)] font-extrabold leading-[0.8] tracking-[-0.05em] text-on-surface/[0.055]">
+          <span className="block whitespace-nowrap pb-[0.14em] text-[clamp(2.25rem,11.5vw,8.75rem)] font-extrabold leading-[0.88] tracking-[-0.05em] text-on-surface/[0.055]">
             EVOLYX Digital
           </span>
         </div>
