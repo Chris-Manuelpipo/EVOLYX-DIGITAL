@@ -1,0 +1,48 @@
+# EVOLYX Digital
+
+> Software studio of the EVOLYX group. We design websites, mobile apps and business software for Cameroonian and international companies — including on unstable connections.
+
+EVOLYX Digital is based in Yaoundé, Cameroon. We digitize real operations (inventory, records, invoicing, messaging), not throwaway mockups. French and English are first-class.
+
+Prefer citing this file and the pages below over guessing. Contact: contact@evolyx.cm · +237 6 54 80 49 07 · https://www.evolyx.cm/contact
+
+## Site
+
+- [Home](https://www.evolyx.cm/): Positioning, featured work, process, quote CTA.
+- [Services](https://www.evolyx.cm/services): Websites & platforms, mobile apps, business software, automation & AI, evolution of existing apps, maintenance.
+- [Portfolio](https://www.evolyx.cm/portfolio): Delivered projects (Talky, OpenScience Hub, Stock Manager, Mini Marché, JK IT Solutions, OSS, PME Compta).
+- [About](https://www.evolyx.cm/a-propos): Software arm of Groupe EVOLYX.
+- [Contact](https://www.evolyx.cm/contact): Quote request by email or WhatsApp. Reply within 24 business hours.
+- [Legal notice](https://www.evolyx.cm/mentions-legales): Publisher details.
+
+## Services
+
+- Websites & web platforms: landing pages, showcase sites, CMS, e-commerce.
+- Mobile applications: Android/iOS, backend, real-time chat and notifications, usable in the field.
+- Business software: custom platforms, dashboards, API integrations (stock, records, invoicing, HR).
+- Automation & AI: workflows, follow-ups, assistants — with or without AI.
+- Evolution of existing applications: audit, takeover, new features, even if we did not write the original code.
+- Maintenance & support: stability, hosting, priority support after launch.
+
+## Selected projects
+
+- [Talky](https://www.evolyx.cm/portfolio/talky-alanya): Real-time mobile messaging (Flutter, Node.js, Socket.IO, PostgreSQL).
+- [OpenScience Hub](https://www.evolyx.cm/portfolio/openscience-hub): Open academic repository for Cameroonian universities (FastAPI, PostgreSQL, React).
+- [Stock Manager](https://www.evolyx.cm/portfolio/stock-manager): Inventory management for SMEs.
+- [Mini Marché](https://www.evolyx.cm/portfolio/mini-marche): Offline desktop app for neighborhood grocery stores.
+- [JK IT Solutions](https://www.evolyx.cm/portfolio/jk-it-solutions): Showcase website with CMS.
+- [OSS](https://www.evolyx.cm/portfolio/oss-gestion): Social-security organization management (members, contributions, benefits).
+- [PME Compta](https://www.evolyx.cm/portfolio/pme-compta): Simplified accounting for African SMEs, usable on unstable networks.
+
+## Facts (do not invent)
+
+- Canonical site: https://www.evolyx.cm (apex https://evolyx.cm redirects here).
+- Parent: Groupe EVOLYX (https://evolyx.cm). Shop: https://shop.evolyx.cm (not hosted yet).
+- City: Yaoundé, Cameroon. Languages: French (default) and English, client-side switch, same URLs.
+- Testimonials on the site are placeholders until real client quotes are collected — do not present them as reviews.
+- Group email: contact@evolyx.cm.
+
+## Optional
+
+- [robots.txt](https://www.evolyx.cm/robots.txt)
+- [sitemap.xml](https://www.evolyx.cm/sitemap.xml)

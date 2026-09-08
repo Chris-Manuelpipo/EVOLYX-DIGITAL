@@ -43,7 +43,7 @@ src/
 ├── pages/            # Pages routées (dont NotFound.jsx)
 ├── data/             # Contenu (services.js, projects.js) -- à éditer pour ajouter du contenu
 ├── locales/          # Traductions fr/en
-├── lib/              # Configuration (i18n)
+├── lib/              # i18n, thème, URLs canoniques, JSON-LD
 ├── index.css         # Système visuel complet : tokens, utilitaires, animations
 └── App.jsx           # Routing principal
 docs/                  # Documentation projet (vision, cahier des charges, plan agents IA)
@@ -52,12 +52,12 @@ docs/                  # Documentation projet (vision, cahier des charges, plan 
 ## Configuration requise avant mise en production
 
 - [ ] **Configurer EmailJS** — voir [Formulaire de contact](#formulaire-de-contact). Sans ça, seul le bouton WhatsApp fonctionne.
+- [ ] **Google Analytics 4** — `VITE_GA_MEASUREMENT_ID` dans Vercel, puis redeploy. Voir [Référencement](#référencement-search-console-et-trafic).
+- [ ] **Google Search Console** — propriété domaine `evolyx.cm` + sitemap. Voir la même section.
 - [ ] **Remplacer les témoignages d'emplacement** dans `src/data/testimonials.js` — voir [Témoignages](#témoignages)
 - [ ] **Ajouter les captures manquantes** (Talky, OpenScience Hub, Stock Manager, Mini Marché, PME Compta) — voir [Captures d'écran du portfolio](#captures-décran-du-portfolio)
 - [ ] Compléter les mentions légales dans `src/data/contact.js` (RCCM, NIU, forme juridique, siège, directeur, hébergeur)
 - [ ] Renseigner `linkedin` et `github` dans `src/data/contact.js` (masqués tant qu'ils sont vides)
-- [ ] Passer `og:image` en URL absolue dans `index.html` une fois le domaine fixé
-- [ ] Ajouter `robots.txt` et `sitemap.xml`, et une règle de réécriture SPA chez l'hébergeur
 
 ## Charte graphique
 
@@ -262,4 +262,80 @@ emplacement en attente, pas une illustration qui prétendrait montrer le produit
 
 Actuellement fournies : `jk-it-solutions`, `oss-gestion`. Manquantes : Talky,
 OpenScience Hub, Stock Manager, Mini Marché, PME Compta.
-titre en lignes masquées, `<Eyebrow index={1}>` produit le label numéroté.
+
+## Référencement, Search Console et trafic
+
+Le site canonique est **`https://www.evolyx.cm`**. L'apex `https://evolyx.cm`
+redirige déjà vers `www`.
+
+Déjà en place dans le dépôt :
+
+| Fichier / mécanisme | Rôle |
+|---|---|
+| `public/robots.txt` | Autorise Google et les crawlers d'IA, pointe vers le sitemap |
+| `public/sitemap.xml` | Toutes les URLs indexables (pages + projets) |
+| `public/llms.txt` | Fiche factuelle pour ChatGPT, Claude, Perplexity, etc. |
+| `index.html` | Title, description, Open Graph **absolus**, JSON-LD Organisation |
+| `src/components/seo/Seo.jsx` | Title / meta / canonical / OG / fil d'Ariane par page ; `noindex` sur le 404 |
+| `src/components/seo/Analytics.jsx` | GA4, seulement si `VITE_GA_MEASUREMENT_ID` est défini **et** que l'hôte est `evolyx.cm` |
+
+Les langues FR/EN partagent les **mêmes URLs** (commutateur client). On ne
+déclare pas de `hreflang` vers des adresses distinctes qui n'existent pas.
+
+### 1. Google Analytics 4 (trafic)
+
+1. Ouvre [Google Analytics](https://analytics.google.com) avec un compte Google.
+2. **Admin** → **Créer** → **Propriété**. Nom : `EVOLYX Digital`. Fuseau :
+   `Africa/Douala`. Devise : `XAF` (ou EUR si tu préfères comparer).
+3. Plateforme **Web**. URL : `https://www.evolyx.cm`.
+4. Copie l'**identifiant de mesure** `G-XXXXXXXX`.
+5. Vercel → projet → **Settings → Environment Variables** :
+   - Name : `VITE_GA_MEASUREMENT_ID`
+   - Value : `G-XXXXXXXX`
+   - Environments : **Production**
+6. **Deployments** → dernier déploiement → **Redeploy**. Vite inline la
+   variable au build : sans rebuild, rien ne change.
+7. Visite `https://www.evolyx.cm`, puis dans GA4 **Rapports → Temps réel**.
+   Une vue doit apparaître en moins d'une minute.
+
+Le script n'est **pas** chargé sur `localhost` ni sur `*.vercel.app`.
+
+### 2. Google Search Console (indexation)
+
+La méthode **DNS** est la plus fiable (SPA : la balise HTML n'est pas
+toujours lue avant JavaScript). Les nameservers du domaine sont déjà Vercel.
+
+1. Ouvre [Google Search Console](https://search.google.com/search-console).
+2. Ajoute une propriété de type **Domaine** : `evolyx.cm` (sans `www`, sans
+   `https`). Ça couvre apex, `www` et les futurs sous-domaines.
+3. Google affiche un enregistrement **TXT**. Copie-le.
+4. Vercel → le projet (ou **Team → Domains → evolyx.cm**) → **DNS**.
+   Ajoute :
+   - Type : `TXT`
+   - Name : `@`
+   - Value : la chaîne `google-site-verification=…` fournie par Google
+5. Dans Search Console, clique **Valider**. La propagation TXT peut prendre
+   de quelques minutes à 48 h.
+6. Une fois validé : **Sitemaps** → saisis `https://www.evolyx.cm/sitemap.xml`
+   → **Envoyer**.
+7. **Paramètres → utilisateurs** : tu peux ajouter un second compte Google
+   plus tard.
+
+Vérification HTML (plan B) : colle le jeton dans `VITE_GSC_VERIFICATION` sur
+Vercel, redeploy, puis revalide. Le plugin Vite n'écrit la balise
+`<meta name="google-site-verification">` que si le jeton est présent.
+
+### 3. Après 48 h
+
+- Search Console → **Couverture / Pages** : aucune URL importante en
+  `Exclue` à tort (le 404 doit rester `noindex`).
+- Teste une URL : [Inspecteur d'URL](https://search.google.com/search-console)
+  → `https://www.evolyx.cm/` → **Demander une indexation**.
+- Partage WhatsApp / LinkedIn : [Facebook Sharing Debugger](https://developers.facebook.com/tools/debug/)
+  avec `https://www.evolyx.cm/` pour rafraîchir `og:image`.
+- Rich results : [Google Rich Results Test](https://search.google.com/test/rich-results)
+  sur l'accueil (Organisation) et une fiche projet.
+
+Quand tu ajoutes un projet dans `src/data/projects.js`, ajoute aussi son URL
+dans `public/sitemap.xml`.
+

@@ -20,7 +20,9 @@
     "contact_title": "Demander un devis — EVOLYX Digital",
     "contact_description": "Décrivez votre besoin. Réponse sous 24h ouvrées par email ou WhatsApp.",
     "legal_title": "Mentions légales — EVOLYX Digital",
-    "legal_description": "Mentions légales d'EVOLYX Digital, branche développement logiciel du groupe EVOLYX."
+    "legal_description": "Mentions légales d'EVOLYX Digital, branche développement logiciel du groupe EVOLYX.",
+    "not_found_title": "Page introuvable — EVOLYX Digital",
+    "not_found_description": "Cette page n'existe pas. Revenez à l'accueil ou consultez le portfolio EVOLYX Digital."
   },
   "nav": {
     "home": "Accueil",

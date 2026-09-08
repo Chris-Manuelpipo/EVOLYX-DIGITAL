@@ -20,7 +20,9 @@
     "contact_title": "Request a quote — EVOLYX Digital",
     "contact_description": "Describe your need. Reply within 24 business hours by email or WhatsApp.",
     "legal_title": "Legal notice — EVOLYX Digital",
-    "legal_description": "Legal notice for EVOLYX Digital, the software development arm of the EVOLYX group."
+    "legal_description": "Legal notice for EVOLYX Digital, the software development arm of the EVOLYX group.",
+    "not_found_title": "Page not found — EVOLYX Digital",
+    "not_found_description": "This page does not exist. Go back home or browse the EVOLYX Digital portfolio."
   },
   "nav": {
     "home": "Home",
