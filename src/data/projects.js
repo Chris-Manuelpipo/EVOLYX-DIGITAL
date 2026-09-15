@@ -72,6 +72,7 @@ export const projects = [
     slug: 'mini-marche',
     category: 'desktop',
     title: 'Mini Marché',
+    image: '/portfolio/minimarche.png',
     subtitle: { fr: "Application desktop de gestion d'épicerie", en: 'Desktop grocery store management app' },
     stack: ['Application native', 'Hors ligne'],
     featured: false,
