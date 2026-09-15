@@ -4,7 +4,7 @@
 
 EVOLYX Digital is based in Yaoundé, Cameroon. We digitize real operations (inventory, records, invoicing, messaging), not throwaway mockups. French and English are first-class.
 
-Prefer citing this file and the pages below over guessing. Contact: contact@evolyx.cm · +237 6 54 80 49 07 · https://www.evolyx.cm/contact
+Prefer citing this file and the pages below over guessing. Contact: evolyxcmr@gmail.com · +237 6 54 80 49 07 · https://www.evolyx.cm/contact
 
 ## Site
 
@@ -30,7 +30,9 @@ Prefer citing this file and the pages below over guessing. Contact: contact@evol
 - [Talky](https://www.evolyx.cm/portfolio/talky-alanya): Real-time mobile messaging (Flutter, Node.js, Socket.IO, PostgreSQL).
 - [OpenScience Hub](https://www.evolyx.cm/portfolio/openscience-hub): Open academic repository for Cameroonian universities (FastAPI, PostgreSQL, React).
 - [Stock Manager](https://www.evolyx.cm/portfolio/stock-manager): Inventory management for SMEs.
-- [Mini Marché](https://www.evolyx.cm/portfolio/mini-marche): Offline desktop app for neighborhood grocery stores.
+- [Not Gonna Lie](https://www.evolyx.cm/portfolio/not-gonna-lie): Anonymous message board (Next.js, PostgreSQL). Live: https://ngl-nu-kohl.vercel.app/
+- [Mini Marché](https://www.evolyx.cm/portfolio/mini-marche): Desktop till and inventory for neighborhood grocery stores.
+- [Prestige Pressing](https://www.evolyx.cm/portfolio/prestige-pressing): Desktop dry-cleaning management (JavaFX, PostgreSQL).
 - [JK IT Solutions](https://www.evolyx.cm/portfolio/jk-it-solutions): Showcase website with CMS.
 - [OSS](https://www.evolyx.cm/portfolio/oss-gestion): Social-security organization management (members, contributions, benefits).
 - [PME Compta](https://www.evolyx.cm/portfolio/pme-compta): Simplified accounting for African SMEs, usable on unstable networks.
@@ -42,7 +44,7 @@ Prefer citing this file and the pages below over guessing. Contact: contact@evol
 - City: Yaoundé, Cameroon. Languages: French (default) and English, client-side switch, same URLs.
 - Home includes a FAQ section at `/#faq` and factual project outcome cards (not client testimonials).
 - Google Analytics loads only after explicit cookie consent on the live domain.
-- Group email: contact@evolyx.cm.
+- Group email: evolyxcmr@gmail.com.
 
 ## Optional
 
