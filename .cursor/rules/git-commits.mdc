@@ -1,0 +1,11 @@
+---
+description: Règles de commit git pour ce dépôt
+alwaysApply: true
+---
+
+# Commits git
+
+- Ne **jamais** ajouter `Co-authored-by: Cursor` (ni aucun trailer Cursor) dans les messages de commit.
+- Messages en français, concis (1–2 phrases), centrés sur le pourquoi.
+- Préférer plusieurs petits commits thématiques plut qu’un gros commit fourre-tout.
+- Ne pas utiliser `--no-verify` sauf demande explicite de l’utilisateur.
