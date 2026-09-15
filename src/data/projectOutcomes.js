@@ -16,10 +16,10 @@ export const projectOutcomes = [
     },
   },
   {
-    project: 'stock-manager',
+    project: 'mini-marche',
     outcome: {
-      fr: "Suivi des stocks, mouvements et alertes de seuil bas dans une interface pensée pour un usage commercial quotidien.",
-      en: 'Inventory, movements and low-stock alerts in an interface designed for everyday retail use.',
+      fr: "Point de vente et stock sur un seul poste : catalogue, panier et paiement en FCFA pour les épiceries de quartier.",
+      en: 'Till and inventory on one terminal: catalog, cart and FCFA checkout for neighborhood grocery stores.',
     },
   },
 ];

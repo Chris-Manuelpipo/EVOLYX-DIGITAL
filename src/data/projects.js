@@ -14,7 +14,7 @@ export const projects = [
     title: 'Talky',
     subtitle: { fr: 'Messagerie mobile en temps réel', en: 'Real-time mobile messaging' },
     stack: ['Flutter', 'Node.js', 'Socket.IO', 'PostgreSQL'],
-    featured: true,
+    featured: false,
     context: {
       fr: "Talky est une application de messagerie mobile pensée pour une discussion fluide et instantanée, avec statuts de message en temps réel (envoyé, distribué, lu).",
       en: 'Talky is a mobile messaging application designed for a fluid, instant chat experience, with real-time message status (sent, delivered, read).',
@@ -26,6 +26,28 @@ export const projects = [
     highlight: {
       fr: "Synchronisation fine entre client mobile et serveur, y compris en conditions réseau instables.",
       en: 'Fine-grained real-time synchronization between mobile client and server, including under unstable network conditions.',
+    },
+  },
+  {
+    slug: 'not-gonna-lie',
+    category: 'web',
+    title: 'Not Gonna Lie',
+    subtitle: { fr: 'Plateforme de messages anonymes', en: 'Anonymous message board' },
+    stack: ['Next.js', 'PostgreSQL', 'Redis'],
+    featured: true,
+    url: 'https://ngl-nu-kohl.vercel.app/',
+    image: '/portfolio/ngl.png',
+    context: {
+      fr: "Partager un avis franc sans créer de compte ni laisser de trace : le défi est de garder l'anonymat réel tout en évitant la haine et le spam.",
+      en: 'Share a blunt take without an account or a trail: the challenge is real anonymity while keeping hate and spam out.',
+    },
+    solution: {
+      fr: "Application Next.js avec API, PostgreSQL et limitation de débit (Redis en production) : publication anonyme, réactions like/dislike, modération admin, sans fil de commentaires.",
+      en: 'Next.js app with API, PostgreSQL and rate limiting (Redis in production): anonymous posts, like/dislike reactions, admin moderation, no comment threads.',
+    },
+    highlight: {
+      fr: "Anonymat sans pseudo ni compte, modération ciblée, déployé en serverless sur Vercel.",
+      en: 'Anonymity without handles or accounts, focused moderation, deployed serverless on Vercel.',
     },
   },
   {
@@ -73,20 +95,41 @@ export const projects = [
     category: 'desktop',
     title: 'Mini Marché',
     image: '/portfolio/minimarche.png',
-    subtitle: { fr: "Application desktop de gestion d'épicerie", en: 'Desktop grocery store management app' },
-    stack: ['Application native', 'Hors ligne'],
+    subtitle: { fr: 'Caisse et stock pour épicerie', en: 'Till and inventory for grocery stores' },
+    stack: ['Application desktop'],
     featured: false,
     context: {
-      fr: "Les petites épiceries de quartier ont besoin d'un outil simple et local pour gérer ventes et stock, sans connexion Internet permanente.",
-      en: 'Small neighborhood grocery stores need a simple, local tool to manage sales and inventory, without depending on a permanent internet connection.',
+      fr: "Les épiceries de quartier encaissent au comptoir tout en suivant des dizaines de références : il faut un outil local, rapide, avec stock visible au moment de la vente.",
+      en: 'Neighborhood stores check out at the counter while tracking dozens of SKUs: they need a local, fast tool with stock visible at sale time.',
     },
     solution: {
-      fr: "Application desktop autonome : ventes, inventaire et suivi des produits, utilisable sans connexion permanente.",
-      en: 'Standalone desktop application: sales, inventory and product tracking, usable without a permanent connection.',
+      fr: "Application desktop : point de vente, panier, paiement en FCFA, catalogue produits avec niveaux de stock, plus modules produits, achats, stock et rapports.",
+      en: 'Desktop application: point of sale, cart, payment in FCFA, product catalog with stock levels, plus products, purchases, inventory and reports modules.',
     },
     highlight: {
-      fr: "Fonctionne en local, adapté aux commerces avec un accès Internet limité.",
-      en: 'Runs locally, suited to businesses with limited internet access.',
+      fr: "Parcours caisse complet sur poste de boutique, sans dépendre d'une connexion permanente.",
+      en: 'Full checkout flow on the shop terminal, without relying on a permanent connection.',
+    },
+  },
+  {
+    slug: 'prestige-pressing',
+    category: 'desktop',
+    title: 'Prestige Pressing',
+    subtitle: { fr: 'Gestion de pressing / blanchisserie', en: 'Dry-cleaning shop management' },
+    stack: ['JavaFX', 'PostgreSQL'],
+    featured: false,
+    image: '/portfolio/prestige-pressing.png',
+    context: {
+      fr: "Un pressing de quartier doit suivre dépôts, dates de retrait, encaissements et retards — souvent avec plusieurs personnes au comptoir et à l'atelier.",
+      en: 'A neighborhood dry cleaner must track drop-offs, pickup dates, payments and delays — often with several people at the counter and in the back.',
+    },
+    solution: {
+      fr: "Application bureau (JRE embarqué) : nouveaux dépôts, suivi et livraisons, caisse, clients, personnel, tickets PDF, gestion des incidents.",
+      en: 'Desktop app (bundled JRE): new drop-offs, tracking and delivery, till, customers, staff, PDF tickets, incident handling.',
+    },
+    highlight: {
+      fr: "Tableau de bord matinal (encaisse, retards, flux atelier) et parcours comptoir documenté de bout en bout.",
+      en: 'Morning dashboard (takings, overdue orders, shop-floor flow) and a documented end-to-end counter workflow.',
     },
   },
   {
