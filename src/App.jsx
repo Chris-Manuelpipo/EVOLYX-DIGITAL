@@ -3,8 +3,11 @@ import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
+import CookieBanner from './components/layout/CookieBanner';
 import Seo from './components/seo/Seo';
 import Analytics from './components/seo/Analytics';
+import { getAnalyticsConsent } from './lib/consent';
+import { loadGoogleAnalytics } from './lib/googleAnalytics';
 
 const Home = lazy(() => import('./pages/Home'));
 const Services = lazy(() => import('./pages/Services'));
@@ -13,6 +16,7 @@ const ProjectDetail = lazy(() => import('./pages/ProjectDetail'));
 const About = lazy(() => import('./pages/About'));
 const Contact = lazy(() => import('./pages/Contact'));
 const LegalNotice = lazy(() => import('./pages/LegalNotice'));
+const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 function ScrollToTop() {
@@ -36,6 +40,10 @@ function PageFallback() {
 function AppShell() {
   const { t } = useTranslation();
 
+  useEffect(() => {
+    if (getAnalyticsConsent() === 'granted') loadGoogleAnalytics();
+  }, []);
+
   return (
     <>
       <a
@@ -58,11 +66,13 @@ function AppShell() {
             <Route path="/a-propos" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/mentions-legales" element={<LegalNotice />} />
+            <Route path="/politique-de-confidentialite" element={<PrivacyPolicy />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
       </main>
       <Footer />
+      <CookieBanner />
     </>
   );
 }

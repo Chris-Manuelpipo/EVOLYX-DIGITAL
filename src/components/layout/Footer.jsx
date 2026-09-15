@@ -11,6 +11,7 @@ const QUICK_LINKS = [
   { to: '/portfolio', key: 'portfolio' },
   { to: '/a-propos', key: 'about' },
   { to: '/contact', key: 'contact' },
+  { to: '/#faq', key: 'faq' },
 ];
 
 export default function Footer() {
@@ -144,12 +145,20 @@ export default function Footer() {
           <p className="text-xs text-on-muted">
             © {year} EVOLYX Digital — {t('footer.rights')}
           </p>
-          <Link
-            to="/mentions-legales"
-            className="link-line text-xs text-on-muted transition-colors hover:text-on-surface"
-          >
-            {t('footer.legal')}
-          </Link>
+          <div className="flex flex-wrap gap-x-5 gap-y-2">
+            <Link
+              to="/politique-de-confidentialite"
+              className="link-line text-xs text-on-muted transition-colors hover:text-on-surface"
+            >
+              {t('footer.privacy')}
+            </Link>
+            <Link
+              to="/mentions-legales"
+              className="link-line text-xs text-on-muted transition-colors hover:text-on-surface"
+            >
+              {t('footer.legal')}
+            </Link>
+          </div>
         </div>
       </div>
     </Reveal>

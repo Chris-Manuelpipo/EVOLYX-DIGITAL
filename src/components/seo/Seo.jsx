@@ -19,6 +19,11 @@ const ROUTES = {
   '/a-propos': ['seo.about_title', 'seo.about_description', 'nav.about'],
   '/contact': ['seo.contact_title', 'seo.contact_description', 'nav.contact'],
   '/mentions-legales': ['seo.legal_title', 'seo.legal_description', 'footer.legal'],
+  '/politique-de-confidentialite': [
+    'seo.privacy_title',
+    'seo.privacy_description',
+    'footer.privacy',
+  ],
 };
 
 function setMeta(attr, key, content) {
