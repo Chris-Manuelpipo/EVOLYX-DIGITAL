@@ -1,12 +1,13 @@
 import { useTranslation } from 'react-i18next';
-import { contact, isFilled } from '../data/contact';
+import { contact, formatLegalHost, isFilled } from '../data/contact';
 import PageHeader from '../components/layout/PageHeader';
 import Reveal from '../components/ui/Reveal';
 import { sectionBandClass } from '../lib/sectionBand';
 
 export default function PrivacyPolicy() {
   const { t } = useTranslation();
-  const host = isFilled(contact.legal.host) ? contact.legal.host : t('privacy_page.host_pending');
+  const hostFormatted = formatLegalHost(contact.legal.host);
+  const host = isFilled(hostFormatted) ? hostFormatted : t('privacy_page.host_pending');
 
   const sections = [
     { title: t('privacy_page.controller_title'), body: t('privacy_page.controller_text', { email: contact.email }) },

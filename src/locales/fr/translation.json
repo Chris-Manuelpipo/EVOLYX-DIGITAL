@@ -291,7 +291,11 @@
     "niu": "N° NIU",
     "address": "Siège social",
     "director": "Directeur de publication",
-    "host": "Hébergement",
+    "hosting": "Hébergement du site",
+    "hosting_intro": "Le site evolyx.cm est hébergé par Vercel (infrastructure cloud, déploiement et diffusion des pages).",
+    "host_name": "Hébergeur",
+    "host_address": "Adresse",
+    "host_website": "Site web",
     "contact": "Contact"
   },
   "theme": {

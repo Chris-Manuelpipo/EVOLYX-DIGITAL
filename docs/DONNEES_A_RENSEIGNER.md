@@ -4,15 +4,10 @@ Checklist avant mise en production « complète ». Aucun secret dans ce fichier
 
 ## 1. Mentions légales — `src/data/contact.js` → `legal`
 
-| Champ | Exemple | Statut |
-|--------|---------|--------|
-| `legalForm` | SARL, SA, etc. | À compléter |
-| `rccm` | N° RCCM Yaoundé | À compléter |
-| `niu` | N° NIU | À compléter |
-| `address` | Adresse du siège (rue, quartier) | À compléter |
-| `city` | Yaoundé, Cameroun | Partiellement renseigné |
-| `director` | Directeur de publication | À compléter |
-| `host` | Vercel Inc. — 440 N Barranca Ave #4133, Covina, CA 91723, USA | Recommandé pour la politique de confidentialité |
+| Champ | Statut |
+|--------|--------|
+| `company`, `parent`, `director` | Renseignés (voir `contact.js`) |
+| `host` | Vercel Inc. (`{ name, address, url }`) |
 
 Affichage : [`src/pages/LegalNotice.jsx`](../src/pages/LegalNotice.jsx).
 
@@ -52,7 +47,9 @@ Format : **1600×1000**, de préférence **.webp**. Puis ajouter `image: '/portf
 | `talky-alanya` | `talky-alanya.webp` | Non |
 | `openscience-hub` | `openscience-hub.webp` | Non |
 | `stock-manager` | `stock-manager.webp` | Non |
-| `mini-marche` | `mini-marche.webp` | Non |
+| `mini-marche` | `minimarche.png` | Oui |
+| `not-gonna-lie` | `ngl.png` | Oui |
+| `prestige-pressing` | `prestige-pressing.png` | Oui |
 | `jk-it-solutions` | `jk-it-solutions.webp` | Oui |
 | `oss-gestion` | `oss-gestion.webp` | Oui |
 | `pme-compta` | `pme-compta.webp` | Non |
@@ -61,7 +58,7 @@ Priorité visuelle : projets `featured: true` et capture du héros (premier proj
 
 ## 6. Recette rapide après remplissage
 
-- [ ] `/mentions-legales` sans « À renseigner »
+- [x] `/mentions-legales` — éditeur + hébergeur + contact
 - [ ] Formulaire `/contact` → email reçu (EmailJS)
 - [ ] Bandeau cookies → Accepter → trafic visible dans GA4 (prod uniquement)
 - [ ] Search Console : sitemap soumis, pages indexées

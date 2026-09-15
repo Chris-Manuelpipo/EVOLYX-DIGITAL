@@ -291,7 +291,11 @@
     "niu": "NIU No.",
     "address": "Registered office",
     "director": "Publication director",
-    "host": "Hosting",
+    "hosting": "Site hosting",
+    "hosting_intro": "The evolyx.cm website is hosted by Vercel (cloud infrastructure, deployment and content delivery).",
+    "host_name": "Host",
+    "host_address": "Address",
+    "host_website": "Website",
     "contact": "Contact"
   },
   "theme": {
