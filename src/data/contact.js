@@ -12,13 +12,14 @@ export const contact = {
   legal: {
     company: 'EVOLYX Digital',
     parent: 'Groupe EVOLYX',
+    // Voir docs/DONNEES_A_RENSEIGNER.md — champs vides = « À renseigner » sur /mentions-legales
     legalForm: '',
     rccm: '',
     niu: '',
     address: '',
     city: 'Yaoundé, Cameroun',
     director: '',
-    host: '',
+    host: '', // ex. Vercel Inc. + adresse, pour mentions et politique de confidentialité
   },
 };
 
