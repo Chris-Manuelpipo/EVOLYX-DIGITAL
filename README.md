@@ -52,12 +52,13 @@ docs/                  # Documentation projet (vision, cahier des charges, plan 
 ## Configuration requise avant mise en production
 
 - [ ] **Configurer EmailJS** — voir [Formulaire de contact](#formulaire-de-contact). Sans ça, seul le bouton WhatsApp fonctionne.
-- [ ] **Google Analytics 4** — `VITE_GA_MEASUREMENT_ID` dans Vercel, puis redeploy. Voir [Référencement](#référencement-search-console-et-trafic).
+- [ ] **Google Analytics 4** — `VITE_GA_MEASUREMENT_ID` sur Vercel ; le script ne se charge qu'**après consentement** cookies en prod. Voir [Référencement](#référencement-search-console-et-trafic).
 - [ ] **Google Search Console** — propriété domaine `evolyx.cm` + sitemap. Voir la même section.
-- [ ] **Remplacer les témoignages d'emplacement** dans `src/data/testimonials.js` — voir [Témoignages](#témoignages)
-- [ ] **Ajouter les captures manquantes** (Talky, OpenScience Hub, Stock Manager, Mini Marché, PME Compta) — voir [Captures d'écran du portfolio](#captures-décran-du-portfolio)
-- [ ] Compléter les mentions légales dans `src/data/contact.js` (RCCM, NIU, forme juridique, siège, directeur, hébergeur)
+- [ ] **Ajouter les captures manquantes** — liste dans [`docs/DONNEES_A_RENSEIGNER.md`](docs/DONNEES_A_RENSEIGNER.md) et [Captures d'écran du portfolio](#captures-décran-du-portfolio)
+- [ ] Compléter les mentions légales dans `src/data/contact.js` (voir `docs/DONNEES_A_RENSEIGNER.md`)
 - [ ] Renseigner `linkedin` et `github` dans `src/data/contact.js` (masqués tant qu'ils sont vides)
+
+Checklist détaillée (EmailJS, GSC, légal, images) : [`docs/DONNEES_A_RENSEIGNER.md`](docs/DONNEES_A_RENSEIGNER.md).
 
 ## Charte graphique
 
@@ -211,44 +212,21 @@ Tant que les trois variables sont absentes, le formulaire n'échoue pas
 silencieusement : il affiche « Le formulaire n'est pas encore connecté » et
 renvoie vers l'email et WhatsApp.
 
-## Témoignages
+## Impacts projet (accueil)
 
-⚠️ **Les trois entrées de [`src/data/testimonials.js`](src/data/testimonials.js) sont
-des emplacements, pas des témoignages.** Leur texte est une consigne de
-remplissage, précisément pour qu'on ne puisse pas les confondre avec de vrais
-avis clients. Publier de faux témoignages se retourne contre l'entreprise : un
-prospect qui le repère ne revient pas.
-
-Pour en ajouter un vrai :
+La section « Ce que ces projets ont résolu » s'appuie sur [`src/data/projectOutcomes.js`](src/data/projectOutcomes.js) : formulations **factuelles** liées à un slug de [`projects.js`](src/data/projects.js), sans citation client.
 
 ```js
 {
-  quote: { fr: "…", en: "…" },   // 2 à 4 lignes. Un problème concret avant,
-                                 // un résultat mesurable après.
-  author: 'Awa N.',              // prénom + initiale si le client préfère
-  role: { fr: 'Directrice', en: 'Director' },
-  company: 'Nom de l\'entreprise',
-  project: 'jk-it-solutions',    // slug d'un projet (optionnel)
-  avatar: '/testimonials/awa.webp',  // carré 160x160 (optionnel)
+  project: 'jk-it-solutions',
+  outcome: {
+    fr: '…',
+    en: '…',
+  },
 }
 ```
 
-Demandez l'accord **écrit** du client avant de publier son nom et celui de son
-entreprise.
-
-Comportement :
-
-- une entrée dont `quote.fr` est vide est ignorée ;
-- si plus aucune entrée n'est valide, la section disparaît entièrement de la
-  page d'accueil et le bloc « Le mot du client » disparaît des pages projet —
-  vérifié en capture. Mieux vaut un site plus court qu'une preuve sociale
-  fabriquée ;
-- la grille s'adapte : une carte centrée à 1, deux colonnes à 2, trois au-delà ;
-- un témoignage rattaché à un `project` remonte automatiquement sur la page de
-  ce projet, sous « Le mot du client ».
-
-Composants : [`TestimonialsSection.jsx`](src/components/home/TestimonialsSection.jsx)
-(accueil) et [`TestimonialCard.jsx`](src/components/testimonials/TestimonialCard.jsx).
+Composants : [`ProjectOutcomesSection.jsx`](src/components/home/ProjectOutcomesSection.jsx) et [`OutcomeCard.jsx`](src/components/home/OutcomeCard.jsx).
 
 ## Captures d'écran du portfolio
 
@@ -277,7 +255,9 @@ Déjà en place dans le dépôt :
 | `public/llms.txt` | Fiche factuelle pour ChatGPT, Claude, Perplexity, etc. |
 | `index.html` | Title, description, Open Graph **absolus**, JSON-LD Organisation |
 | `src/components/seo/Seo.jsx` | Title / meta / canonical / OG / fil d'Ariane par page ; `noindex` sur le 404 |
-| `src/components/seo/Analytics.jsx` | GA4, seulement si `VITE_GA_MEASUREMENT_ID` est défini **et** que l'hôte est `evolyx.cm` |
+| `src/components/seo/Analytics.jsx` | GA4 après consentement cookies, hôte `evolyx.cm` / `www.evolyx.cm` |
+| `src/components/layout/CookieBanner.jsx` | Bandeau Accepter / Refuser analytics |
+| `src/pages/PrivacyPolicy.jsx` | Politique de confidentialité FR/EN |
 
 Les langues FR/EN partagent les **mêmes URLs** (commutateur client). On ne
 déclare pas de `hreflang` vers des adresses distinctes qui n'existent pas.
@@ -295,10 +275,12 @@ déclare pas de `hreflang` vers des adresses distinctes qui n'existent pas.
    - Environments : **Production**
 6. **Deployments** → dernier déploiement → **Redeploy**. Vite inline la
    variable au build : sans rebuild, rien ne change.
-7. Visite `https://www.evolyx.cm`, puis dans GA4 **Rapports → Temps réel**.
-   Une vue doit apparaître en moins d'une minute.
+7. Visite `https://www.evolyx.cm`, clique **Accepter** sur le bandeau cookies,
+   puis dans GA4 **Rapports → Temps réel**. Une vue doit apparaître en moins
+   d'une minute.
 
-Le script n'est **pas** chargé sur `localhost` ni sur `*.vercel.app`.
+Le script n'est **pas** chargé sur `localhost` ni sur `*.vercel.app`, et **pas**
+non plus en prod tant que le visiteur n'a pas accepté la mesure d'audience.
 
 ### 2. Google Search Console (indexation)
 

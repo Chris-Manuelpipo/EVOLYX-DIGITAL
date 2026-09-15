@@ -8,11 +8,12 @@ Prefer citing this file and the pages below over guessing. Contact: contact@evol
 
 ## Site
 
-- [Home](https://www.evolyx.cm/): Positioning, featured work, process, quote CTA.
+- [Home](https://www.evolyx.cm/): Positioning, featured work, concrete project outcomes, process, FAQ (`/#faq`), quote CTA.
 - [Services](https://www.evolyx.cm/services): Websites & platforms, mobile apps, business software, automation & AI, evolution of existing apps, maintenance.
 - [Portfolio](https://www.evolyx.cm/portfolio): Delivered projects (Talky, OpenScience Hub, Stock Manager, Mini Marché, JK IT Solutions, OSS, PME Compta).
 - [About](https://www.evolyx.cm/a-propos): Software arm of Groupe EVOLYX.
 - [Contact](https://www.evolyx.cm/contact): Quote request by email or WhatsApp. Reply within 24 business hours.
+- [Privacy policy](https://www.evolyx.cm/politique-de-confidentialite): Data processing, cookies, analytics consent.
 - [Legal notice](https://www.evolyx.cm/mentions-legales): Publisher details.
 
 ## Services
@@ -39,7 +40,8 @@ Prefer citing this file and the pages below over guessing. Contact: contact@evol
 - Canonical site: https://www.evolyx.cm (apex https://evolyx.cm redirects here).
 - Parent: Groupe EVOLYX (https://evolyx.cm). Shop: https://shop.evolyx.cm (not hosted yet).
 - City: Yaoundé, Cameroon. Languages: French (default) and English, client-side switch, same URLs.
-- Testimonials on the site are placeholders until real client quotes are collected — do not present them as reviews.
+- Home includes a FAQ section at `/#faq` and factual project outcome cards (not client testimonials).
+- Google Analytics loads only after explicit cookie consent on the live domain.
 - Group email: contact@evolyx.cm.
 
 ## Optional
