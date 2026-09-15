@@ -172,7 +172,7 @@ ne s'ouvre pas, la saisie doit rester intacte.
 2. **Email Services** → ajouter un service (Gmail, Outlook ou SMTP). Noter le
    `Service ID`.
 3. **Email Templates** → créer un template. Noter le `Template ID`. Renseigner :
-   - **To email** : `contact@evolyx.cm`
+   - **To email** : `evolyxcmr@gmail.com`
    - **Reply-To** : `{{email}}` ← indispensable, sinon répondre au prospect
      depuis la boîte mail renvoie vers vous-même
    - **Subject** : `Nouvelle demande — {{name}} ({{projectTypeLabel}})`
