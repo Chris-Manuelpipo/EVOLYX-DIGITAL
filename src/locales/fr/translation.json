@@ -21,6 +21,8 @@
     "contact_description": "Décrivez votre besoin. Réponse sous 24h ouvrées par email ou WhatsApp.",
     "legal_title": "Mentions légales — EVOLYX Digital",
     "legal_description": "Mentions légales d'EVOLYX Digital, branche développement logiciel du groupe EVOLYX.",
+    "privacy_title": "Politique de confidentialité — EVOLYX Digital",
+    "privacy_description": "Comment EVOLYX Digital traite vos données (formulaire, WhatsApp, mesure d'audience) et vos droits.",
     "not_found_title": "Page introuvable — EVOLYX Digital",
     "not_found_description": "Cette page n'existe pas. Revenez à l'accueil ou consultez le portfolio EVOLYX Digital."
   },
@@ -30,10 +32,11 @@
     "portfolio": "Portfolio",
     "about": "À propos",
     "contact": "Contact",
+    "faq": "FAQ",
     "cta": "Demander un devis"
   },
   "hero": {
-    "eyebrow": "Temps réel · Hors-ligne · Yaoundé",
+    "eyebrow": "Conçu pour le terrain · Yaoundé · Afrique & international",
     "title_lines": [
       "Nous transformons vos idées",
       "en produits numériques"
@@ -215,7 +218,41 @@
     "group": "Groupe EVOLYX",
     "contact": "Contact",
     "legal": "Mentions légales",
+    "privacy": "Politique de confidentialité",
+    "faq": "FAQ",
     "rights": "Tous droits réservés."
+  },
+  "cookies": {
+    "title": "Cookies et mesure d'audience",
+    "text": "Nous utilisons des cookies strictement nécessaires au fonctionnement du site et, avec votre accord, Google Analytics pour comprendre l'usage du site. Vous pouvez refuser la mesure d'audience.",
+    "accept": "Accepter",
+    "refuse": "Refuser"
+  },
+  "privacy_page": {
+    "title_lines": [
+      "Politique de",
+      "confidentialité"
+    ],
+    "intro": "Cette page décrit comment EVOLYX Digital traite les données personnelles collectées via ce site.",
+    "host_pending": "hébergeur du site (voir mentions légales)",
+    "controller_title": "Responsable du traitement",
+    "controller_text": "EVOLYX Digital, branche logiciel du groupe EVOLYX, basée à Yaoundé (Cameroun). Contact : {{email}}.",
+    "data_title": "Données collectées",
+    "data_text": "Via le formulaire de contact : nom, entreprise (optionnel), email, téléphone (optionnel), type de projet, budget indicatif et description du besoin. Via WhatsApp : les informations que vous choisissez d'envoyer dans la conversation. Via la mesure d'audience (si vous acceptez) : données d'usage anonymisées (pages vues, type d'appareil, localisation approximative).",
+    "purpose_title": "Finalités",
+    "purpose_text": "Répondre à vos demandes de devis et assurer le suivi commercial ; améliorer le site grâce à des statistiques agrégées lorsque vous avez donné votre consentement.",
+    "legal_basis_title": "Bases légales",
+    "legal_basis_text": "Intérêt légitime et mesures précontractuelles pour le traitement des demandes de contact. Consentement pour Google Analytics et cookies associés. Vous pouvez retirer votre consentement analytics à tout moment en effaçant les données du site dans votre navigateur ou en nous contactant.",
+    "retention_title": "Durée de conservation",
+    "retention_text": "Les messages reçus par email ou WhatsApp sont conservés le temps nécessaire au traitement de la demande et au suivi client, puis archivés ou supprimés selon nos obligations légales. Les données analytics sont conservées selon la durée configurée dans Google Analytics (par défaut 14 mois).",
+    "processors_title": "Sous-traitants",
+    "processors_text": "EmailJS (envoi des emails du formulaire), Google Analytics (mesure d'audience, si acceptée), WhatsApp / Meta (messagerie si vous nous contactez par ce canal), hébergement : {{host}}.",
+    "cookies_title": "Cookies",
+    "cookies_text": "Préférence de langue et de thème : stockage local dans votre navigateur. Analytics : cookies Google uniquement si vous cliquez sur « Accepter » dans le bandeau. Refuser n'empêche pas l'utilisation du site.",
+    "rights_title": "Vos droits",
+    "rights_text": "Vous pouvez demander l'accès, la rectification ou l'effacement de vos données, ou vous opposer à certains traitements, en écrivant à {{email}}. Vous pouvez aussi introduire une réclamation auprès de l'autorité compétente de votre pays.",
+    "updates_title": "Mises à jour",
+    "updates_text": "Cette politique peut évoluer. La date de dernière mise à jour correspond à la publication sur ce site. Dernière révision : septembre 2026."
   },
   "about_page": {
     "title_lines": [
@@ -263,14 +300,12 @@
     "light": "Thème clair",
     "dark": "Thème sombre"
   },
-  "testimonials": {
-    "eyebrow": "Ce qu'ils en disent",
+  "outcomes": {
+    "eyebrow": "Impacts concrets",
     "title_lines": [
-      "Ce sont nos clients",
-      "qui en parlent le mieux."
+      "Ce que ces projets",
+      "ont résolu."
     ],
-    "subtitle": "Des projets livrés, utilisés au quotidien, et des équipes qui acceptent de le dire.",
-    "related": "Projet : {{title}}",
-    "on_project": "Le mot du client"
+    "subtitle": "Résultats métier tirés de livrables réels — pas des promesses marketing."
   }
 }

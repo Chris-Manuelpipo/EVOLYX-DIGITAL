@@ -21,6 +21,8 @@
     "contact_description": "Describe your need. Reply within 24 business hours by email or WhatsApp.",
     "legal_title": "Legal notice — EVOLYX Digital",
     "legal_description": "Legal notice for EVOLYX Digital, the software development arm of the EVOLYX group.",
+    "privacy_title": "Privacy policy — EVOLYX Digital",
+    "privacy_description": "How EVOLYX Digital handles your data (form, WhatsApp, analytics) and your rights.",
     "not_found_title": "Page not found — EVOLYX Digital",
     "not_found_description": "This page does not exist. Go back home or browse the EVOLYX Digital portfolio."
   },
@@ -30,10 +32,11 @@
     "portfolio": "Portfolio",
     "about": "About",
     "contact": "Contact",
+    "faq": "FAQ",
     "cta": "Request a quote"
   },
   "hero": {
-    "eyebrow": "Real-time · Offline-first · Yaoundé",
+    "eyebrow": "Built for the field · Yaoundé · Africa & international",
     "title_lines": [
       "We turn your ideas",
       "into digital products"
@@ -215,7 +218,41 @@
     "group": "EVOLYX Group",
     "contact": "Contact",
     "legal": "Legal notice",
+    "privacy": "Privacy policy",
+    "faq": "FAQ",
     "rights": "All rights reserved."
+  },
+  "cookies": {
+    "title": "Cookies and analytics",
+    "text": "We use cookies strictly necessary for the site to work and, with your consent, Google Analytics to understand how the site is used. You can refuse analytics.",
+    "accept": "Accept",
+    "refuse": "Decline"
+  },
+  "privacy_page": {
+    "title_lines": [
+      "Privacy",
+      "policy"
+    ],
+    "intro": "This page describes how EVOLYX Digital processes personal data collected through this website.",
+    "host_pending": "site host (see legal notice)",
+    "controller_title": "Data controller",
+    "controller_text": "EVOLYX Digital, software arm of the EVOLYX group, based in Yaoundé (Cameroon). Contact: {{email}}.",
+    "data_title": "Data we collect",
+    "data_text": "Contact form: name, company (optional), email, phone (optional), project type, indicative budget and description of your need. WhatsApp: whatever you choose to send in the conversation. Analytics (if you accept): anonymized usage data (page views, device type, approximate location).",
+    "purpose_title": "Purposes",
+    "purpose_text": "Reply to quote requests and follow up commercially; improve the site with aggregated statistics when you have given consent.",
+    "legal_basis_title": "Legal bases",
+    "legal_basis_text": "Legitimate interest and pre-contractual steps for contact requests. Consent for Google Analytics and related cookies. You can withdraw analytics consent at any time by clearing site data in your browser or contacting us.",
+    "retention_title": "Retention",
+    "retention_text": "Messages received by email or WhatsApp are kept as long as needed to handle the request and client follow-up, then archived or deleted according to legal obligations. Analytics data is retained per Google Analytics settings (default 14 months).",
+    "processors_title": "Processors",
+    "processors_text": "EmailJS (form email delivery), Google Analytics (audience measurement, if accepted), WhatsApp / Meta (if you contact us on that channel), hosting: {{host}}.",
+    "cookies_title": "Cookies",
+    "cookies_text": "Language and theme preference: local storage in your browser. Analytics: Google cookies only if you click Accept in the banner. Declining does not block use of the site.",
+    "rights_title": "Your rights",
+    "rights_text": "You may request access, rectification or erasure of your data, or object to certain processing, by writing to {{email}}. You may also lodge a complaint with the competent authority in your country.",
+    "updates_title": "Updates",
+    "updates_text": "This policy may change. The last update date is when it is published on this site. Last revised: September 2026."
   },
   "about_page": {
     "title_lines": [
@@ -263,14 +300,12 @@
     "light": "Light theme",
     "dark": "Dark theme"
   },
-  "testimonials": {
-    "eyebrow": "What they say",
+  "outcomes": {
+    "eyebrow": "Concrete impact",
     "title_lines": [
-      "Our clients say it",
-      "better than we do."
+      "What these projects",
+      "delivered."
     ],
-    "subtitle": "Projects delivered, used every day, by teams willing to say so.",
-    "related": "Project: {{title}}",
-    "on_project": "From the client"
+    "subtitle": "Business outcomes from real deliverables — not marketing promises."
   }
 }
