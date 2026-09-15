@@ -2,8 +2,6 @@ import { useParams, Link, Navigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { FiArrowLeft, FiArrowRight } from 'react-icons/fi';
 import { projects, getCategoryLabel } from '../data/projects';
-import { getTestimonialForProject } from '../data/testimonials';
-import TestimonialCard from '../components/testimonials/TestimonialCard';
 import ProjectCover from '../components/portfolio/ProjectCover';
 import LiveSitePreview from '../components/portfolio/LiveSitePreview';
 import BrowserFrame from '../components/ui/BrowserFrame';
@@ -20,8 +18,6 @@ export default function ProjectDetail() {
 
   const project = projects[currentIndex];
   const next = projects[(currentIndex + 1) % projects.length];
-  const testimonial = getTestimonialForProject(project.slug);
-
   const sections = [
     { key: 'context', label: t('portfolio.context'), text: project.context[lang] },
     { key: 'solution', label: t('portfolio.solution'), text: project.solution[lang] },
@@ -118,15 +114,6 @@ export default function ProjectDetail() {
                 </p>
               </Reveal>
 
-              {/* La parole du client, exactement là où le travail est décrit */}
-              {testimonial && (
-                <Reveal as="section" className="mt-10">
-                  <h2 className="r-rise mb-4 text-sm font-semibold text-on-surface">
-                    {t('testimonials.on_project')}
-                  </h2>
-                  <TestimonialCard testimonial={testimonial} showProjectLink={false} />
-                </Reveal>
-              )}
             </div>
 
             <Reveal as="aside" className="lg:sticky lg:top-24 lg:self-start">
