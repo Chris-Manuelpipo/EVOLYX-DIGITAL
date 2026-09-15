@@ -5,6 +5,7 @@ import ContactForm from '../components/contact/ContactForm';
 import { contact } from '../data/contact';
 import PageHeader from '../components/layout/PageHeader';
 import Reveal from '../components/ui/Reveal';
+import { sectionBandClass } from '../lib/sectionBand';
 
 export default function Contact() {
   const { t } = useTranslation();
@@ -35,7 +36,7 @@ export default function Contact() {
         intro={t('contact.subtitle')}
       />
 
-      <section className="py-14 md:py-20">
+      <section className={sectionBandClass('primary', 'compact')}>
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-[320px_minmax(0,1fr)] lg:gap-14">
             {/* Canaux directs en premier : tout le monde ne veut pas remplir

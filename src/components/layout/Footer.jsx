@@ -18,7 +18,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <Reveal as="footer" className="border-t border-outline bg-surface">
+    <Reveal as="footer" className="border-t border-outline bg-surface-page">
       <div className="mx-auto max-w-7xl px-5 pb-8 pt-16 lg:px-8">
         <div className="grid grid-cols-2 gap-10 lg:grid-cols-[1.6fr_0.8fr_0.8fr_1.1fr]">
           <div className="col-span-2 lg:col-span-1">

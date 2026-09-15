@@ -4,6 +4,7 @@ import { FiArrowRight } from 'react-icons/fi';
 import PageHeader from '../components/layout/PageHeader';
 import Reveal from '../components/ui/Reveal';
 import Brandmark from '../components/ui/Brandmark';
+import { sectionBandClass } from '../lib/sectionBand';
 
 export default function About() {
   const { t } = useTranslation();
@@ -28,7 +29,7 @@ export default function About() {
         intro={t('about_page.intro')}
       />
 
-      <section className="py-16 md:py-24">
+      <section className={sectionBandClass('primary', 'wide')}>
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
           <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-[1fr_auto] lg:gap-20">
             <div>

@@ -8,6 +8,7 @@ import ProjectCover from '../components/portfolio/ProjectCover';
 import LiveSitePreview from '../components/portfolio/LiveSitePreview';
 import BrowserFrame from '../components/ui/BrowserFrame';
 import Reveal from '../components/ui/Reveal';
+import { sectionBandClass } from '../lib/sectionBand';
 
 export default function ProjectDetail() {
   const { slug } = useParams();
@@ -73,7 +74,7 @@ export default function ProjectDetail() {
         </div>
       </Reveal>
 
-      <section className="py-14 md:py-20">
+      <section className={sectionBandClass('primary', 'compact')}>
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
           <Reveal className="r-veil mb-14">
             {project.url ? (

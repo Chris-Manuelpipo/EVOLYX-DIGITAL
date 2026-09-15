@@ -6,12 +6,13 @@ import ServiceCard from '../services/ServiceCard';
 import Reveal from '../ui/Reveal';
 import Headline from '../ui/Headline';
 import SectionLabel from '../ui/SectionLabel';
+import { sectionBandClass } from '../../lib/sectionBand';
 
-export default function ServicesPreview() {
+export default function ServicesPreview({ band = 'primary' }) {
   const { t } = useTranslation();
 
   return (
-    <section className="border-t border-outline bg-surface py-20 md:py-28">
+    <section className={sectionBandClass(band)}>
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <Reveal className="mb-12 max-w-2xl">
           <SectionLabel className="mb-5">{t('services.eyebrow')}</SectionLabel>

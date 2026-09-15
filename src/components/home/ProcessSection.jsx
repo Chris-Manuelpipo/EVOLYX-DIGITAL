@@ -2,14 +2,15 @@ import { useTranslation } from 'react-i18next';
 import Reveal from '../ui/Reveal';
 import Headline from '../ui/Headline';
 import SectionLabel from '../ui/SectionLabel';
+import { sectionBandClass } from '../../lib/sectionBand';
 
 const STEPS = ['step_1', 'step_2', 'step_3', 'step_4', 'step_5'];
 
-export default function ProcessSection() {
+export default function ProcessSection({ band = 'primary' }) {
   const { t } = useTranslation();
 
   return (
-    <section className="border-t border-outline py-20 md:py-28">
+    <section className={sectionBandClass(band)}>
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <Reveal className="mb-14 grid gap-6 lg:grid-cols-[1fr_1fr] lg:items-end">
           <div className="max-w-2xl">

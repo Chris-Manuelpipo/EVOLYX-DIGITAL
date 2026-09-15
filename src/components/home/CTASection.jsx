@@ -6,12 +6,13 @@ import { contact } from '../../data/contact';
 import Reveal from '../ui/Reveal';
 import Headline from '../ui/Headline';
 import LogoMark from '../ui/LogoMark';
+import { sectionBandClass } from '../../lib/sectionBand';
 
-export default function CTASection() {
+export default function CTASection({ band = 'primary' }) {
   const { t } = useTranslation();
 
   return (
-    <section className="border-t border-outline bg-surface py-20 md:py-28">
+    <section className={sectionBandClass(band)}>
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <Reveal className="relative overflow-hidden rounded-xl border border-outline bg-surface-container px-6 py-14 text-center sm:px-12">
           <div className="glow-gold absolute inset-0" aria-hidden="true" />

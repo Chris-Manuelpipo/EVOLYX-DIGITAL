@@ -6,13 +6,14 @@ import ProjectCard from '../portfolio/ProjectCard';
 import Reveal from '../ui/Reveal';
 import Headline from '../ui/Headline';
 import SectionLabel from '../ui/SectionLabel';
+import { sectionBandClass } from '../../lib/sectionBand';
 
-export default function PortfolioPreview() {
+export default function PortfolioPreview({ band = 'muted' }) {
   const { t } = useTranslation();
   const featured = projects.filter((project) => project.featured).slice(0, 3);
 
   return (
-    <section className="border-t border-outline py-20 md:py-28">
+    <section className={sectionBandClass(band)}>
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <Reveal className="mb-12 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="max-w-2xl">

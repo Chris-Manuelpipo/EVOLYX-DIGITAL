@@ -4,6 +4,7 @@ import TestimonialCard from '../testimonials/TestimonialCard';
 import Reveal from '../ui/Reveal';
 import Headline from '../ui/Headline';
 import SectionLabel from '../ui/SectionLabel';
+import { sectionBandClass } from '../../lib/sectionBand';
 
 // La grille s'adapte au nombre réel de témoignages : à deux, trois colonnes
 // laisseraient un trou ; à un seul, une carte pleine largeur serait bancale.
@@ -12,7 +13,7 @@ const COLUMNS = {
   2: 'max-w-4xl mx-auto grid-cols-1 md:grid-cols-2',
 };
 
-export default function TestimonialsSection() {
+export default function TestimonialsSection({ band = 'primary' }) {
   const { t } = useTranslation();
   const testimonials = getTestimonials();
 
@@ -23,7 +24,7 @@ export default function TestimonialsSection() {
   const columns = COLUMNS[testimonials.length] || 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3';
 
   return (
-    <section className="border-t border-outline bg-surface py-20 md:py-28">
+    <section className={sectionBandClass(band)}>
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <Reveal className="mb-12 max-w-2xl">
           <SectionLabel className="mb-5">{t('testimonials.eyebrow')}</SectionLabel>

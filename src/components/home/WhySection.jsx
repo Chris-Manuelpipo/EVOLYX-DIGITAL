@@ -3,6 +3,7 @@ import { FiZap, FiWifiOff, FiShield } from 'react-icons/fi';
 import Reveal from '../ui/Reveal';
 import Headline from '../ui/Headline';
 import SectionLabel from '../ui/SectionLabel';
+import { sectionBandClass } from '../../lib/sectionBand';
 
 const POINTS = [
   { key: 'point_1', icon: FiZap },
@@ -10,11 +11,11 @@ const POINTS = [
   { key: 'point_3', icon: FiShield },
 ];
 
-export default function WhySection() {
+export default function WhySection({ band = 'muted' }) {
   const { t } = useTranslation();
 
   return (
-    <section className="border-t border-outline bg-surface py-20 md:py-28">
+    <section className={sectionBandClass(band)}>
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <Reveal className="mb-12 max-w-2xl">
           <SectionLabel className="mb-5">{t('why.eyebrow')}</SectionLabel>

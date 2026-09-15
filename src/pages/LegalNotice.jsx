@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { contact, isFilled } from '../data/contact';
 import PageHeader from '../components/layout/PageHeader';
 import Reveal from '../components/ui/Reveal';
+import { sectionBandClass } from '../lib/sectionBand';
 
 function Row({ label, value, pending, href, delay = 0 }) {
   const filled = isFilled(value);
@@ -50,7 +51,7 @@ export default function LegalNotice() {
         lines={t('legal_page.title_lines', { returnObjects: true })}
       />
 
-      <section className="py-14 md:py-20">
+      <section className={sectionBandClass('primary', 'compact')}>
         <div className="mx-auto max-w-3xl px-5 lg:px-8">
           <Reveal as="section" className="card p-6 md:p-8">
             <h2 className="text-sm font-semibold text-on-surface">

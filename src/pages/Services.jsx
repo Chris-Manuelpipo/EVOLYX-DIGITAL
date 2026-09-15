@@ -5,6 +5,7 @@ import { FiArrowRight, FiCheck } from 'react-icons/fi';
 import { services } from '../data/services';
 import PageHeader from '../components/layout/PageHeader';
 import Reveal from '../components/ui/Reveal';
+import { sectionBandClass } from '../lib/sectionBand';
 
 export default function Services() {
   const { t, i18n } = useTranslation();
@@ -25,7 +26,7 @@ export default function Services() {
         intro={t('services.subtitle')}
       />
 
-      <section className="py-16 md:py-24">
+      <section className={sectionBandClass('primary', 'wide')}>
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
           <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
             {services.map((service, index) => (

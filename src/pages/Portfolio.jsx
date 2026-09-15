@@ -4,6 +4,7 @@ import { projects, categories } from '../data/projects';
 import ProjectCard from '../components/portfolio/ProjectCard';
 import PageHeader from '../components/layout/PageHeader';
 import Reveal from '../components/ui/Reveal';
+import { sectionBandClass } from '../lib/sectionBand';
 
 export default function Portfolio() {
   const { t, i18n } = useTranslation();
@@ -27,7 +28,7 @@ export default function Portfolio() {
         intro={t('portfolio.subtitle')}
       />
 
-      <section className="py-14 md:py-20">
+      <section className={sectionBandClass('primary', 'compact')}>
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
           <Reveal className="mb-10 flex flex-wrap items-center gap-2">
             {categories.map((category, index) => {
