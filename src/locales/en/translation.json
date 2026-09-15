@@ -92,6 +92,26 @@
     "point_3_title": "Sensitive domains, structured data",
     "point_3_text": "Records, contributions, benefits: rigorous modeling, not a dressed-up spreadsheet."
   },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title_lines": [
+      "Answers",
+      "before you reach out."
+    ],
+    "subtitle": "Timeline, budget, scope, maintenance: what clients ask us most often on first contact.",
+    "item_1_q": "What kinds of projects do you build?",
+    "item_1_a": "Websites and web platforms, mobile apps, business software (inventory, till, records), automation and evolving existing applications. If your need does not fit a form option, describe it anyway — we will tell you honestly whether it is a good fit.",
+    "item_2_q": "Do you work with clients outside Cameroon?",
+    "item_2_a": "Yes. We work with Cameroonian companies, French-speaking African businesses and international clients. The site and our conversations are in French or English, depending on your team.",
+    "item_3_q": "How does a project run from first contact to delivery?",
+    "item_3_a": "Five steps: first contact to clarify the business problem, written quote and scoping, development in visible iterations, go-live with training, then maintenance if you want it. You keep one point of contact throughout.",
+    "item_4_q": "Do you offer maintenance after go-live?",
+    "item_4_a": "Yes. Fixes, functional improvements and hosting can be part of a maintenance agreement. Scope is defined in the quote so there are no surprises.",
+    "item_5_q": "How do you set budget and timeline?",
+    "item_5_a": "After the first conversation we send a written quote with scope, milestones and budget — before coding starts. Timeline depends on complexity and how quickly you can validate steps. An indicative range in the form helps us tailor the reply.",
+    "item_6_q": "Can I contact you on WhatsApp instead of the form?",
+    "item_6_a": "Yes, and it is often the fastest channel. The site form can also open WhatsApp with your request already drafted. We reply within 24 business hours by email; on WhatsApp, usually faster."
+  },
   "process": {
     "eyebrow": "How it works",
     "title_lines": [

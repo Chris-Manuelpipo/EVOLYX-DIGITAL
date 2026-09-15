@@ -3,9 +3,11 @@ import { useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { projects } from '../../data/projects';
 import { OG_IMAGE, SITE_NAME, SITE_ORIGIN, canonicalUrl } from '../../lib/site';
+import { FAQ_KEYS } from '../../data/faq';
 import {
   breadcrumbNode,
   buildGraph,
+  faqPageNode,
   projectNode,
   webPageNode,
 } from '../../lib/schema';
@@ -112,6 +114,16 @@ export default function Seo() {
         webPageNode({ path: pathname, title, description, lang, extraType }),
         breadcrumbNode(crumbs),
       );
+      if (pathname === '/') {
+        graphNodes.push(
+          faqPageNode(
+            FAQ_KEYS.map((key) => ({
+              question: t(`faq.${key}_q`),
+              answer: t(`faq.${key}_a`),
+            })),
+          ),
+        );
+      }
       if (project) graphNodes.push(projectNode(project, lang));
     }
     setJsonLd(buildGraph(graphNodes));

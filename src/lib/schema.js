@@ -93,9 +93,26 @@ export function projectNode(project, lang) {
   return node;
 }
 
+export function faqPageNode(items) {
+  if (!items.length) return null;
+
+  return {
+    '@type': 'FAQPage',
+    '@id': `${SITE_ORIGIN}/#faq`,
+    mainEntity: items.map(({ question, answer }) => ({
+      '@type': 'Question',
+      name: question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: answer,
+      },
+    })),
+  };
+}
+
 export function buildGraph(nodes) {
   return {
     '@context': 'https://schema.org',
-    '@graph': [organizationNode(), websiteNode(), ...nodes],
+    '@graph': [organizationNode(), websiteNode(), ...nodes.filter(Boolean)],
   };
 }

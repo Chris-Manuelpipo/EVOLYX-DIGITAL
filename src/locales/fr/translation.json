@@ -92,6 +92,26 @@
     "point_3_title": "Métiers sensibles, données structurées",
     "point_3_text": "Dossiers, cotisations, prestations : modélisation rigoureuse, pas un tableur habillé."
   },
+  "faq": {
+    "eyebrow": "Questions fréquentes",
+    "title_lines": [
+      "Les réponses",
+      "avant de nous écrire."
+    ],
+    "subtitle": "Délais, budget, périmètre, maintenance : ce que nos clients nous demandent le plus souvent en première prise de contact.",
+    "item_1_q": "Quels types de projets réalisez-vous ?",
+    "item_1_a": "Sites et plateformes web, applications mobiles, logiciels métier (stock, caisse, dossiers), automatisation et évolution d'applications existantes. Si votre besoin ne correspond à aucune case du formulaire, décrivez-le : nous vous dirons franchement si c'est dans nos cordes.",
+    "item_2_q": "Travaillez-vous avec des clients hors du Cameroun ?",
+    "item_2_a": "Oui. Nous accompagnons des entreprises camerounaises, d'Afrique francophone et des clients internationaux. Le site et nos échanges se font en français ou en anglais, selon votre équipe.",
+    "item_3_q": "Comment se déroule un projet, de la prise de contact à la livraison ?",
+    "item_3_a": "Cinq étapes : prise de contact pour clarifier le problème métier, devis et cadrage écrit, développement par itérations visibles, mise en production avec formation, puis maintenance si vous le souhaitez. Vous gardez un interlocuteur unique tout au long.",
+    "item_4_q": "Proposez-vous la maintenance après la mise en production ?",
+    "item_4_a": "Oui. Correctifs, évolutions fonctionnelles et hébergement peuvent faire partie d'un contrat de maintenance. Le périmètre est défini au devis pour éviter les mauvaises surprises.",
+    "item_5_q": "Comment fixez-vous le budget et les délais ?",
+    "item_5_a": "Après la première discussion, nous vous envoyons un devis avec périmètre, jalons et budget par écrit — avant de coder. Les délais dépendent de la complexité et de votre disponibilité pour valider les étapes. Une fourchette indicative dans le formulaire nous aide à orienter la réponse.",
+    "item_6_q": "Puis-je vous contacter sur WhatsApp plutôt que via le formulaire ?",
+    "item_6_a": "Oui, et c'est souvent le canal le plus rapide. Le formulaire du site peut aussi ouvrir WhatsApp avec votre demande déjà rédigée. Nous répondons sous 24 heures ouvrées par email ; sur WhatsApp, en général plus vite."
+  },
   "process": {
     "eyebrow": "Comment ça marche",
     "title_lines": [

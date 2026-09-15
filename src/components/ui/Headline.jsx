@@ -12,13 +12,14 @@ export default function Headline({
   start = 0,
   accentIndex = -1,
   accentClassName = 'text-gold-text',
+  ...rest
 }) {
   // i18next renvoie la clé brute (une string) si la traduction manque :
   // sans ce garde-fou, un oubli dans un fichier de locale casse la page.
   const safeLines = Array.isArray(lines) ? lines : [lines];
 
   return (
-    <Tag className={className}>
+    <Tag className={className} {...rest}>
       {safeLines.map((line, index) => (
         <span
           key={typeof line === 'string' ? line : index}
